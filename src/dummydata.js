@@ -44,8 +44,8 @@ export const awrapper = [
 export const coursesCard = [
   {
     id: 1,
-    cover: "../images/courses/c1.png",
-    coursesName: "Introducing to Software Engineering",
+    cover: "../images/courses/c5.png",
+    coursesName: "React JS",
     courTeacher: [
       {
         dcover: "./images/back.webp",
@@ -59,7 +59,7 @@ export const coursesCard = [
   {
     id: 2,
     cover: "../images/courses/c2.png",
-    coursesName: "Enhancing Adobe Photoshop CC 2020 Skills",
+    coursesName: "Angular",
     courTeacher: [
       {
         dcover: "./images/back.webp",
@@ -72,8 +72,8 @@ export const coursesCard = [
   },
   {
     id: 3,
-    cover: "../images/courses/c3.png",
-    coursesName: "HTML, CSS, and Javascript for Web Developers",
+    cover: "../images/courses/c7.png",
+    coursesName: "HTML, CSS",
     courTeacher: [
       {
         dcover: "./images/back.webp",
@@ -87,7 +87,7 @@ export const coursesCard = [
   {
     id: 4,
     cover: "../images/courses/c4.png",
-    coursesName: "Introducing to Programming with WordPress",
+    coursesName: "Node Js",
     courTeacher: [
       {
         dcover: "./images/back.webp",
@@ -100,8 +100,8 @@ export const coursesCard = [
   },
   {
     id: 5,
-    cover: "../images/courses/c5.png",
-    coursesName: "Introducing to Programming with ReactJS",
+    cover: "../images/courses/js.png",
+    coursesName: "JavaScript",
     courTeacher: [
       {
         dcover: "./images/back.webp",
@@ -115,7 +115,7 @@ export const coursesCard = [
   {
     id: 6,
     cover: "../images/courses/c6.png",
-    coursesName: "Learn Frontend Programming Language",
+    coursesName: "AI  ",
     courTeacher: [
       {
         dcover: "./images/back.webp",
@@ -128,8 +128,8 @@ export const coursesCard = [
   },
   {
     id: 7,
-    cover: "../images/courses/c7.png",
-    coursesName: "Introducing to with HTML / CSS",
+    cover: "../images/courses/Data Science.png",
+    coursesName: "Data Science",
     courTeacher: [
       {
         dcover: "./images/back.webp",
@@ -142,8 +142,8 @@ export const coursesCard = [
   },
   {
     id: 8,
-    cover: "../images/courses/c8.png",
-    coursesName: "Introducing to with JAVA",
+    cover: "../images/courses/Data Engineering.png",
+    coursesName: "Data Engineering",
     courTeacher: [
       {
         dcover: "./images/back.webp",
@@ -156,8 +156,8 @@ export const coursesCard = [
   },
   {
     id: 9,
-    cover: "../images/courses/c9.png",
-    coursesName: "Introducing to with HTML / CSS / JAVASCRIPT",
+    cover: "../images/courses/Data Analyst.png",
+    coursesName: "Data Analyst",
     courTeacher: [
       {
         dcover: "./images/back.webp",
