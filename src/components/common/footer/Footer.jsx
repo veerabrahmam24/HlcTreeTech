@@ -20,8 +20,8 @@ const Footer = () => {
       <footer>
         <div className='container padding'>
           <div className='box logo'>
-            <h1>ACADEMIA</h1>
-            <span>ONLINE EDUCATION & LEARNING</span>
+            <h1>HLC Tree Tech</h1>
+            {/* <span>ONLINE EDUCATION & LEARNING</span> */}
             <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
 
             <i className='fab fa-facebook-f icon'></i>
@@ -74,11 +74,11 @@ const Footer = () => {
             <ul>
               <li>
                 <i className='fa fa-map'></i>
-                203 Fake St. Mountain View, San Francisco, California, USA
+                  2nd floor, 90/3, Outer Ring Rd, opp. to Innovative Multiplex, above Cream Stone, CKB Layout, Chandra Layout, Marathahalli, Bengaluru, Karnataka 560037
               </li>
               <li>
                 <i className='fa fa-phone-alt'></i>
-                +2 392 3929 210
+                +91 9493983918
               </li>
               <li>
                 <i className='fa fa-paper-plane'></i>
