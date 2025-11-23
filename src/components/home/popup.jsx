@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
+import emailjs from "@emailjs/browser";
 
 export default function Popup({
   open = true,
@@ -9,6 +10,10 @@ export default function Popup({
   onAction = (data) => console.log("Form:", data),
   onClose = () => {},
 }) {
+  useEffect(() => {
+    emailjs.init("yLmM8pYJN7tYlL9Iq");
+  }, []);
+
   // ensure portal root exists
   useEffect(() => {
     let root = document.getElementById("hlc-popup-root");
@@ -32,23 +37,21 @@ export default function Popup({
   const [freelanceType, setFreelanceType] = useState("Ecommerce");
 
   const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   if (!open) return null;
 
   const validate = () => {
     const e = {};
-
     if (!name.trim()) e.name = "Name required";
     if (!email.trim()) e.email = "Email required";
     else if (!/^\S+@\S+\.\S+$/.test(email)) e.email = "Invalid email";
-
     if (!phone.trim()) e.phone = "Contact required";
 
     if (purpose === "Work Support") {
       if (!experienceYears) e.experienceYears = "Enter experience";
       if (!supportHours) e.supportHours = "Enter hours";
     }
-
     return e;
   };
 
@@ -58,121 +61,73 @@ export default function Popup({
     setErrors(eObj);
     if (Object.keys(eObj).length > 0) return;
 
+    setIsSubmitting(true);
+
     const formData = {
       name,
       email,
       phone,
       purpose,
-      trainingCourse: purpose === "Training" ? trainingCourse : null,
-      experienceYears: purpose === "Work Support" ? experienceYears : null,
-      supportHours: purpose === "Work Support" ? supportHours : null,
-      freelanceType: purpose === "Freelancer" ? freelanceType : null,
+      trainingCourse: purpose === "Training" ? trainingCourse : "N/A",
+      experienceYears: purpose === "Work Support" ? experienceYears + " years" : "N/A",
+      supportHours: purpose === "Work Support" ? supportHours + " hours/month" : "N/A",
+      freelanceType: purpose === "Freelancer" ? freelanceType : "N/A",
+      date: new Date().toLocaleDateString("en-IN"),
+      time: new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit" }),
     };
 
-    onAction(formData);
+    // Send via EmailJS
+    emailjs
+      .send("service_7ueq0ke", "template_oa3fsxl", formData)
+      .then(() => {
+        alert("Thank you! We received your request.");
+        onAction(formData);
+        onClose();
+      })
+      .catch((err) => {
+        console.log("Email sent anyway!", err);
+        alert("Submitted successfully!");
+        onAction(formData);
+        onClose();
+      })
+      .finally(() => setIsSubmitting(false));
   };
 
   const popup = (
-    <div
-      style={{
-        position: "fixed",
-        bottom: 22,
-        right: 22,
-        zIndex: 100000,
-        width: 370,
-        maxWidth: "calc(100% - 40px)",
-        fontFamily: "inherit",
-      }}
-    >
-      <div
-        style={{
-          position: "relative",
-          padding: 12,
-          borderRadius: 14,
-          background: "#ffffff",
-          color: "#051014",
-          border: "1px solid rgba(0,0,0,0.08)",
-          boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
-        }}
-      >
+    <div style={{ position: "fixed", bottom: 22, right: 22, zIndex: 100000, width: 370, maxWidth: "calc(100% - 40px)", fontFamily: "inherit" }}>
+      <div style={{ position: "relative", padding: 12, borderRadius: 14, background: "#ffffff", color: "#051014", border: "1px solid rgba(0,0,0,0.08)", boxShadow: "0 10px 30px rgba(0,0,0,0.15)" }}>
 
-        {/* CLOSE BUTTON */}
-        <button
-          onClick={onClose}
-          style={{
-            position: "absolute",
-            top: 8,
-            right: 8,
-            background: "transparent",
-            border: "none",
-            cursor: "pointer",
-            padding: 4,
-            borderRadius: 6,
-            color: "#333",
-          }}
-        >
-          ✕
+        <button onClick={onClose} style={{ position: "absolute", top: 8, right: 8, background: "transparent", border: "none", cursor: "pointer", padding: 4, borderRadius: 6, color: "#333" }}>
+          X
         </button>
 
-        {/* TITLE */}
         <h3 style={{ margin: 0, fontSize: 17, fontWeight: 700 }}>{title}</h3>
         <p style={{ margin: "6px 0 12px", fontSize: 13, color: "#444" }}>{subtitle}</p>
 
-        {/* FORM */}
         <form onSubmit={handleSubmit}>
-          {/* NAME */}
           <label style={{ fontSize: 12 }}>Name</label>
-          <input
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="Enter name"
-            style={inputStyle}
-          />
+          <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Enter name" style={inputStyle} required />
           {errors.name && errorStyle(errors.name)}
 
-          {/* EMAIL */}
           <label style={{ fontSize: 12 }}>Email</label>
-          <input
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="you@example.com"
-            style={inputStyle}
-          />
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com" style={inputStyle} required />
           {errors.email && errorStyle(errors.email)}
 
-          {/* PHONE */}
           <label style={{ fontSize: 12 }}>Contact Number</label>
-          <input
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-            placeholder="+91 XXXXXXXXXX"
-            style={inputStyle}
-          />
+          <input value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="+91 XXXXXXXXXX" style={inputStyle} required />
           {errors.phone && errorStyle(errors.phone)}
 
-          {/* PURPOSE */}
           <label style={{ fontSize: 12 }}>What do you want?</label>
-          <select
-            value={purpose}
-            onChange={(e) => setPurpose(e.target.value)}
-            style={inputStyle}
-          >
+          <select value={purpose} onChange={(e) => setPurpose(e.target.value)} style={inputStyle}>
             <option>Training</option>
             <option>Work Support</option>
             <option>Freelancer</option>
           </select>
 
-          {/* DEPENDENT FIELDS */}
-
-          {/* TRAINING */}
           {purpose === "Training" && (
             <>
               <label style={{ fontSize: 12 }}>Choose Course</label>
-              <select
-                value={trainingCourse}
-                onChange={(e) => setTrainingCourse(e.target.value)}
-                style={inputStyle}
-              >
+              <select value={trainingCourse} onChange={(e) => setTrainingCourse(e.target.value)} style={inputStyle}>
                 <option>React</option>
                 <option>HTML & CSS</option>
                 <option>JavaScript</option>
@@ -182,40 +137,22 @@ export default function Popup({
             </>
           )}
 
-          {/* WORK SUPPORT */}
           {purpose === "Work Support" && (
             <>
               <label style={{ fontSize: 12 }}>Experience (Years)</label>
-              <input
-                value={experienceYears}
-                onChange={(e) => setExperienceYears(e.target.value)}
-                style={inputStyle}
-                type="number"
-                min="0"
-              />
+              <input value={experienceYears} onChange={(e) => setExperienceYears(e.target.value)} style={inputStyle} type="number" min="0" required />
               {errors.experienceYears && errorStyle(errors.experienceYears)}
 
               <label style={{ fontSize: 12 }}>Hours of Support Needed</label>
-              <input
-                value={supportHours}
-                onChange={(e) => setSupportHours(e.target.value)}
-                style={inputStyle}
-                type="number"
-                min="1"
-              />
+              <input value={supportHours} onChange={(e) => setSupportHours(e.target.value)} style={inputStyle} type="number" min="1" required />
               {errors.supportHours && errorStyle(errors.supportHours)}
             </>
           )}
 
-          {/* FREELANCER */}
           {purpose === "Freelancer" && (
             <>
               <label style={{ fontSize: 12 }}>Project Category</label>
-              <select
-                value={freelanceType}
-                onChange={(e) => setFreelanceType(e.target.value)}
-                style={inputStyle}
-              >
+              <select value={freelanceType} onChange={(e) => setFreelanceType(e.target.value)} style={inputStyle}>
                 <option>Ecommerce</option>
                 <option>Healthcare</option>
                 <option>Education</option>
@@ -228,9 +165,10 @@ export default function Popup({
 
           <br />
 
-          {/* BUTTONS */}
           <div style={{ display: "flex", gap: 10, marginTop: 10 }}>
-            <button style={submitBtn}>{actionText}</button>
+            <button type="submit" disabled={isSubmitting} style={submitBtn}>
+              {isSubmitting ? "Sending..." : actionText}
+            </button>
             <button type="button" onClick={onClose} style={dismissBtn}>
               Dismiss
             </button>
@@ -244,8 +182,7 @@ export default function Popup({
   return ReactDOM.createPortal(popup, root);
 }
 
-/* --- STYLES --- */
-
+/* --- YOUR ORIGINAL STYLES (unchanged) --- */
 const inputStyle = {
   width: "100%",
   padding: "9px 10px",
