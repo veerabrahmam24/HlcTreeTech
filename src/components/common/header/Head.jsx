@@ -7,7 +7,7 @@ const Head = () => {
         <div className='container flexSB'>
           <div className='logo'>
             <h1>ACADEMIA</h1>
-            <span>ONLINE EDUCATION & LEARNING</span>
+            <span>Learn Today. Build Your Tomorrow. With Our Support.Learn Today. Build Your Tomorrow. With Our Support.</span>
           </div>
 
           <div className='social'>
