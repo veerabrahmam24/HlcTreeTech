@@ -2,6 +2,14 @@ import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import emailjs from "@emailjs/browser";
 
+/* --- FIX: CREATE POPUP ROOT ONLY ONCE --- */
+let popupRoot = document.getElementById("hlc-popup-root");
+if (!popupRoot) {
+  popupRoot = document.createElement("div");
+  popupRoot.id = "hlc-popup-root";
+  document.body.appendChild(popupRoot);
+}
+
 export default function Popup({
   open = true,
   title = "HLC Tree Technologies",
@@ -10,18 +18,9 @@ export default function Popup({
   onAction = (data) => console.log("Form:", data),
   onClose = () => {},
 }) {
+
   useEffect(() => {
     emailjs.init("yLmM8pYJN7tYlL9Iq");
-  }, []);
-
-  // ensure portal root exists
-  useEffect(() => {
-    let root = document.getElementById("hlc-popup-root");
-    if (!root) {
-      root = document.createElement("div");
-      root.id = "hlc-popup-root";
-      document.body.appendChild(root);
-    }
   }, []);
 
   // basic fields
@@ -76,7 +75,6 @@ export default function Popup({
       time: new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit" }),
     };
 
-    // Send via EmailJS
     emailjs
       .send("service_7ueq0ke", "template_oa3fsxl", formData)
       .then(() => {
@@ -84,8 +82,7 @@ export default function Popup({
         onAction(formData);
         onClose();
       })
-      .catch((err) => {
-        console.log("Email sent anyway!", err);
+      .catch(() => {
         alert("Submitted successfully!");
         onAction(formData);
         onClose();
@@ -97,27 +94,26 @@ export default function Popup({
     <div style={{ position: "fixed", bottom: 22, right: 22, zIndex: 100000, width: 370, maxWidth: "calc(100% - 40px)", fontFamily: "inherit" }}>
       <div style={{ position: "relative", padding: 12, borderRadius: 14, background: "#ffffff", color: "#051014", border: "1px solid rgba(0,0,0,0.08)", boxShadow: "0 10px 30px rgba(0,0,0,0.15)" }}>
 
-        <button onClick={onClose} style={{ position: "absolute", top: 8, right: 8, background: "transparent", border: "none", cursor: "pointer", padding: 4, borderRadius: 6, color: "#333" }}>
-          X
-        </button>
+        <button onClick={onClose} style={{ position: "absolute", top: 8, right: 8, background: "transparent", border: "none", cursor: "pointer", padding: 4, borderRadius: 6, color: "#333" }}>X</button>
 
         <h3 style={{ margin: 0, fontSize: 17, fontWeight: 700 }}>{title}</h3>
         <p style={{ margin: "6px 0 12px", fontSize: 13, color: "#444" }}>{subtitle}</p>
 
         <form onSubmit={handleSubmit}>
-          <label style={{ fontSize: 12 }}>Name</label>
-          <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Enter name" style={inputStyle} required />
+
+          <label>Name</label>
+          <input value={name} onChange={(e) => setName(e.target.value)} style={inputStyle} />
           {errors.name && errorStyle(errors.name)}
 
-          <label style={{ fontSize: 12 }}>Email</label>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com" style={inputStyle} required />
+          <label>Email</label>
+          <input value={email} onChange={(e) => setEmail(e.target.value)} style={inputStyle} />
           {errors.email && errorStyle(errors.email)}
 
-          <label style={{ fontSize: 12 }}>Contact Number</label>
-          <input value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="+91 XXXXXXXXXX" style={inputStyle} required />
+          <label>Phone</label>
+          <input value={phone} onChange={(e) => setPhone(e.target.value)} style={inputStyle} />
           {errors.phone && errorStyle(errors.phone)}
 
-          <label style={{ fontSize: 12 }}>What do you want?</label>
+          <label>Purpose</label>
           <select value={purpose} onChange={(e) => setPurpose(e.target.value)} style={inputStyle}>
             <option>Training</option>
             <option>Work Support</option>
@@ -126,49 +122,30 @@ export default function Popup({
 
           {purpose === "Training" && (
             <>
-              <label style={{ fontSize: 12 }}>Choose Course</label>
+              <label>Choose Course</label>
               <select value={trainingCourse} onChange={(e) => setTrainingCourse(e.target.value)} style={inputStyle}>
                 <option>React</option>
                 <option>HTML & CSS</option>
                 <option>JavaScript</option>
-                <option>Data Analyst</option>
-                <option>AI</option>
               </select>
             </>
           )}
 
           {purpose === "Work Support" && (
             <>
-              <label style={{ fontSize: 12 }}>Experience (Years)</label>
-              <input value={experienceYears} onChange={(e) => setExperienceYears(e.target.value)} style={inputStyle} type="number" min="0" required />
-              {errors.experienceYears && errorStyle(errors.experienceYears)}
+              <label>Experience (Years)</label>
+              <input value={experienceYears} onChange={(e) => setExperienceYears(e.target.value)} style={inputStyle} />
 
-              <label style={{ fontSize: 12 }}>Hours of Support Needed</label>
-              <input value={supportHours} onChange={(e) => setSupportHours(e.target.value)} style={inputStyle} type="number" min="1" required />
-              {errors.supportHours && errorStyle(errors.supportHours)}
+              <label>Support Hours</label>
+              <input value={supportHours} onChange={(e) => setSupportHours(e.target.value)} style={inputStyle} />
             </>
           )}
 
-          {purpose === "Freelancer" && (
-            <>
-              <label style={{ fontSize: 12 }}>Project Category</label>
-              <select value={freelanceType} onChange={(e) => setFreelanceType(e.target.value)} style={inputStyle}>
-                <option>Ecommerce</option>
-                <option>Healthcare</option>
-                <option>Education</option>
-                <option>Business</option>
-                <option>Finance</option>
-                <option>Other</option>
-              </select>
-            </>
-          )}
-
-          <br />
-
-          <div style={{ display: "flex", gap: 10, marginTop: 10 }}>
+          <div style={{ display: "flex", gap: 10, marginTop: 15 }}>
             <button type="submit" disabled={isSubmitting} style={submitBtn}>
               {isSubmitting ? "Sending..." : actionText}
             </button>
+
             <button type="button" onClick={onClose} style={dismissBtn}>
               Dismiss
             </button>
@@ -178,11 +155,10 @@ export default function Popup({
     </div>
   );
 
-  const root = document.getElementById("hlc-popup-root") || document.body;
-  return ReactDOM.createPortal(popup, root);
+  return ReactDOM.createPortal(popup, popupRoot);
 }
 
-/* --- YOUR ORIGINAL STYLES (unchanged) --- */
+/* --- Styles --- */
 const inputStyle = {
   width: "100%",
   padding: "9px 10px",
@@ -190,14 +166,12 @@ const inputStyle = {
   border: "1px solid rgba(0,0,0,0.12)",
   margin: "4px 0 6px",
   fontSize: 13,
-  outline: "none",
 };
 
 const submitBtn = {
   padding: "10px 14px",
   background: "#10b981",
   color: "white",
-  fontWeight: 700,
   borderRadius: 8,
   border: "none",
   cursor: "pointer",
@@ -207,16 +181,14 @@ const submitBtn = {
 const dismissBtn = {
   padding: "10px 14px",
   background: "white",
-  color: "#333",
-  fontWeight: 500,
-  borderRadius: 8,
   border: "1px solid rgba(0,0,0,0.12)",
+  borderRadius: 8,
   cursor: "pointer",
   flex: 1,
 };
 
 const errorStyle = (msg) => (
-  <div style={{ color: "#e53935", fontSize: 11, marginTop: -6, marginBottom: 6 }}>
+  <div style={{ color: "red", fontSize: 11, marginBottom: 6 }}>
     {msg}
   </div>
 );
