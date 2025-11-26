@@ -39,6 +39,20 @@ header ul li a:hover {
   color: #fff;
   clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0% 100%);
 }
+.start .button {
+  /* background: #5baf0d; */
+  /* color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px; */
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT LIKE ABOUT */
+.start .button:hover {
+  color: #fff;
+}
+
 .toggle {
   display: none;
 }
