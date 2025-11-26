@@ -18,15 +18,15 @@ const Header = () => {
         <nav className='flexSB'>
           <ul className={click ? "mobile-nav" : "flexSB "} onClick={() => setClick(false)}>
             <li>
-              <Link to='/'>Home</Link>
+             <a href='/' className='nav-link'>Home</a>
+              </li>
+            <li>
+              <a href='/courses' className='nav-link'>All Courses</a>
             </li>
             <li>
-              <Link to='/courses'>All Courses</Link>
+              <a href='/about' className='nav-link'>About</a>
             </li>
-            <li>
-              <Link to='/about'>About</Link>
-            </li>
-            <li>
+            {/* <li>
               <Link to='/team'>Team</Link>
             </li>
             <li>
@@ -37,8 +37,9 @@ const Header = () => {
             </li>
             <li>
               <Link to='/contact'>Contact</Link>
-            </li>
+            </li> */}
           </ul>
+<<<<<<< HEAD
           <div className="start">
             {/* ---------- OPEN POPUP ON CLICK ---------- */}
             <div
@@ -47,6 +48,10 @@ const Header = () => {
             >
               GET CERTIFICATE
             </div>
+=======
+          <div className='start'>
+            <div className='button'>GET IN TOUCH</div>
+>>>>>>> 2ac3394dd386d1d0568f4861b08cd06e2ff648bd
           </div>
 
           <button className="toggle" onClick={() => setClick(!click)}>
