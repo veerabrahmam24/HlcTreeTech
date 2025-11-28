@@ -1,9 +1,16 @@
-import React from "react"
-import { Link } from "react-router-dom"
+import React, { useState } from "react";
 import Heading from "../../common/heading/Heading"
-import "./Hero.css" 
+import "./Hero.css"
+import Popup from "../popup";
 
 const Hero = () => {
+  const [popupOpen, setPopupOpen] = useState(true);
+
+  function handlePopupSubmit(formData) {
+    console.log("Form submitted from popup:", formData);
+
+    setPopupOpen(false);
+  }
   return (
     <>
       <section className='hero'>
@@ -26,6 +33,12 @@ const Hero = () => {
           </div>
         </div>
       </section>
+       <Popup
+        open={popupOpen}
+        onClose={() => setPopupOpen(false)}          // ← important: closes when cross clicked
+        onAction={(formData) => handlePopupSubmit(formData)} // receives form data on submit
+      />
+
       <div className='margin'></div>
     </>
   )
