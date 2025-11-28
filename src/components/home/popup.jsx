@@ -257,7 +257,6 @@ export default function Popup({
             <button type="submit" disabled={isSubmitting} style={submitBtn}>
               {isSubmitting ? "Sending..." : actionText}
             </button>
-
             <button type="button" onClick={onClose} style={dismissBtn}>
               Dismiss
             </button>
