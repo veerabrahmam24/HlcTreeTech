@@ -10,11 +10,11 @@ const Head = () => {
             style={{ display: "flex", alignItems: "center", gap: "20px" }}
           >
             <img
-              src="/images/logo.jpg"
+              src="/images/logo.png"
               alt="Logo"
               style={{
-                width: "120px",
-                height: "80px",
+                width: "150px",
+                height: "90px",
                 objectFit: "cover",
                 marginLeft: "-85px",
                 borderRadius: "10px"
@@ -24,7 +24,7 @@ const Head = () => {
 
             <div>
               <h1>HLC Tree Technologies</h1>
-              <span>ONLINE EDUCATION & LEARNING</span>
+              <span>Learn Today. Build Your Tomorrow. With Our Support</span>
             </div>
           </div>
 

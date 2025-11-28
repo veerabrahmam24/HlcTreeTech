@@ -5,7 +5,7 @@ import "./footer.css"
 const Footer = () => {
   return (
     <>
-      <section className='newletter'>
+      {/* <section className='newletter'>
         <div className='container flexSB'>
           <div className='left row'>
             <h1>Newsletter - Stay tune and get the latest update</h1>
@@ -16,7 +16,7 @@ const Footer = () => {
             <i className='fa fa-paper-plane'></i>
           </div>
         </div>
-      </section>
+      </section> */}
       <footer>
         <div className='container padding'>
           <div className='box logo'>
@@ -78,11 +78,11 @@ const Footer = () => {
               </li>
               <li>
                 <i className='fa fa-phone-alt'></i>
-                +91 9493983918
+                +91 123456789
               </li>
               <li>
                 <i className='fa fa-paper-plane'></i>
-                info@yourdomain.com
+                info@hlctreetechnologies.com
               </li>
             </ul>
           </div>
@@ -90,7 +90,7 @@ const Footer = () => {
       </footer>
       <div className='legal'>
         <p>
-          Copyright ©2022 All rights reserved | This template is made with <i className='fa fa-heart'></i> by GorkhCoder
+          Copyright ©2025 All rights reserved | This template is made with <i className='fa fa-heart'></i> by HLC Technologies 
         </p>
       </div>
     </>

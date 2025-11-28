@@ -6,7 +6,7 @@ import Heading from "../common/heading/Heading"
 const OnlineCourses = () => {
   return (
     <>
-  <section id='online' className='online'>
+  {/* <section id='online' className='online'>
         <div className='container'>
           <Heading subtitle='COURSES' title='Browse Our Online Courses' />
           <div className='content grid3'>
@@ -22,7 +22,7 @@ const OnlineCourses = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   )
 }
