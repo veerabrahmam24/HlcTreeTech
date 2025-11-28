@@ -33,15 +33,3 @@
     width: 100%;
   }
 }
-/* Hero.css */
-.view-course-btn {
-  background: transparent;
-  color: #fff;
-  border: 2px solid #fff;   /* or whatever color you use */
-  margin-left: 15px;
-}
-
-.view-course-btn:hover {
-  background: #fff;
-  color: #000;
-}

@@ -10,11 +10,11 @@ const Head = () => {
             style={{ display: "flex", alignItems: "center", gap: "20px" }}
           >
             <img
-              src="/images/vhlc999.png"
+              src="/images/logo.jpg"
               alt="Logo"
               style={{
-                width: "150px",
-                height: "90px",
+                width: "120px",
+                height: "80px",
                 objectFit: "cover",
                 marginLeft: "-85px",
                 borderRadius: "10px"
@@ -24,24 +24,15 @@ const Head = () => {
 
             <div>
               <h1>HLC Tree Technologies</h1>
-              <span>Learn Today.Build Your Tomorrow.With Our Support.</span>
-
+              <span>ONLINE EDUCATION & LEARNING</span>
             </div>
           </div>
 
           <div className="social">
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-            <i className='fab fa-facebook-f icon'></i>
-             </a>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-            <i className='fab fa-twitter icon'></i>
-            </a>
-           <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-            <i className='fab fa-instagram icon'></i>
-            </a>
-            <a href="https://youtu.be/5JoPeWHkKJg?si=yKn8_hKV9w0ge-EF" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-facebook-f icon"></i>
+            <i className="fab fa-instagram icon"></i>
+            <i className="fab fa-twitter icon"></i>
             <i className="fab fa-youtube icon"></i>
-            </a>
           </div>
         </div>
       </section>
