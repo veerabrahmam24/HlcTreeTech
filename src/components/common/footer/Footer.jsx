@@ -23,10 +23,15 @@ const Footer = () => {
             <h1>HLC Tree Tech</h1>
             {/* <span>ONLINE EDUCATION & LEARNING</span> */}
             <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-
-            <i className='fab fa-facebook-f icon'></i>
-            <i className='fab fa-twitter icon'></i>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+           <i className='fab fa-facebook-f icon'></i>
+            </a>
+          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+           <i className='fab fa-twitter icon'></i>
+           </a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
             <i className='fab fa-instagram icon'></i>
+           </a>
           </div>
           <div className='box link'>
             <h3>Explore</h3>
