@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const Head = () => {
   return (
@@ -10,16 +10,16 @@ const Head = () => {
             <span>Learn Today. Build Your Tomorrow. With Our Support.Learn Today. Build Your Tomorrow. With Our Support.</span>
           </div>
 
-          <div className='social'>
-            <i className='fab fa-facebook-f icon'></i>
-            <i className='fab fa-instagram icon'></i>
-            <i className='fab fa-twitter icon'></i>
-            <i className='fab fa-youtube icon'></i>
+          <div className="social">
+            <i className="fab fa-facebook-f icon"></i>
+            <i className="fab fa-instagram icon"></i>
+            <i className="fab fa-twitter icon"></i>
+            <i className="fab fa-youtube icon"></i>
           </div>
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Head
+export default Head;
