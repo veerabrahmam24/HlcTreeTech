@@ -22,10 +22,9 @@ const Hero = () => {
               <button className='primary-btn'>
                 GET STARTED NOW <i className='fa fa-long-arrow-alt-right'></i>
               </button>
-             <button>
+              <button>
                 VIEW COURSE <i className='fa fa-long-arrow-alt-right'></i>
               </button>
-              
             </div>
           </div>
         </div>
