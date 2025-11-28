@@ -69,21 +69,18 @@ export default function Popup({
     setIsSubmitting(true);
 
     const formData = {
-      name,
-      email,
-      phone,
+      name: name.trim(),
+      email: email.trim(),
+      phone: phone.trim(),
       purpose,
-      trainingCourse: purpose === "Training" ? trainingCourse : "N/A",
-      experienceYears:
-        purpose === "Work Support" ? experienceYears + " years" : "N/A",
-      supportHours:
-        purpose === "Work Support" ? supportHours + " hours/month" : "N/A",
-      freelanceType: purpose === "Freelancer" ? freelanceType : "N/A",
+      trainingCourse: purpose === "Training" ? trainingCourse : "",
+      experienceYears: purpose === "Work Support" ? experienceYears + " years" : "",
+      supportHours: purpose === "Work Support" ? supportHours + " hours/month" : "",
+      freelanceType: purpose === "Freelancer" ? freelanceType : "",
       date: new Date().toLocaleDateString("en-IN"),
-      time: new Date().toLocaleTimeString("en-IN", {
-        hour: "2-digit",
-        minute: "2-digit",
-      }),
+      time: new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit" }),
+      
+      firstLetter: name.trim() ? name.trim()[0].toUpperCase() : "?",
     };
 
     emailjs
