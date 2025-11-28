@@ -5,7 +5,7 @@ import "./footer.css"
 const Footer = () => {
   return (
     <>
-      <section className='newletter'>
+      {/* <section className='newletter'>
         <div className='container flexSB'>
           <div className='left row'>
             <h1>Newsletter - Stay tune and get the latest update</h1>
@@ -16,17 +16,22 @@ const Footer = () => {
             <i className='fa fa-paper-plane'></i>
           </div>
         </div>
-      </section>
+      </section> */}
       <footer>
         <div className='container padding'>
           <div className='box logo'>
             <h1>HLC Tree Tech</h1>
             {/* <span>ONLINE EDUCATION & LEARNING</span> */}
             <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
             <i className='fab fa-facebook-f icon'></i>
+             </a>
+            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
             <i className='fab fa-twitter icon'></i>
+            </a>
+           <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
             <i className='fab fa-instagram icon'></i>
+            </a>
           </div>
           <div className='box link'>
             <h3>Explore</h3>
@@ -78,7 +83,7 @@ const Footer = () => {
               </li>
               <li>
                 <i className='fa fa-phone-alt'></i>
-                +91 9493983918
+                +91 1234567890
               </li>
               <li>
                 <i className='fa fa-paper-plane'></i>
@@ -90,7 +95,7 @@ const Footer = () => {
       </footer>
       <div className='legal'>
         <p>
-          Copyright ©2022 All rights reserved | This template is made with <i className='fa fa-heart'></i> by GorkhCoder
+          Copyright ©2025 All rights reserved | This template is made with <i className='fa fa-heart'></i> by HLC Tree Technologies
         </p>
       </div>
     </>
