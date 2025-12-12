@@ -68,6 +68,18 @@
   font-weight: 500;
 }
 /*----------awrapper------------*/
+@media screen and (max-width: 1024px) {
+  .aboutHome .right {
+    padding: 50px 30px;
+  }
+  .aboutHome .item {
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .awrapper .box {
+    padding: 50px 0;
+  }
+}
 @media screen and (max-width: 768px) {
   .aboutHome .container {
     flex-direction: column-reverse;
@@ -77,5 +89,20 @@
   }
   .awrapper {
     height: 50vh;
+  }
+  .aboutHome .item {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 576px) {
+  .aboutHome .right {
+    padding: 36px 18px;
+  }
+  .aboutHome .items {
+    margin-top: 30px;
+  }
+  .awrapper {
+    height: auto;
+    padding: 32px 0;
   }
 }

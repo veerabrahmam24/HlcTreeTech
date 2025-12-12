@@ -122,7 +122,7 @@ export default function Popup({
           boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
         }}
       >
-        <button
+        {/* <button
           onClick={onClose}
           style={{
             position: "absolute",
@@ -137,7 +137,7 @@ export default function Popup({
           }}
         >
           X
-        </button>
+        </button> */}
 
         <h3 style={{ margin: 0, fontSize: 17, fontWeight: 700 }}>{title}</h3>
         <p style={{ margin: "6px 0 12px", fontSize: 13, color: "#444" }}>

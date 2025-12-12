@@ -1,5 +1,5 @@
 .coursesCard {
-  padding: 50px 0;
+  padding: 0;
 }
 .coursesCard .items {
   background-color: #fff;
@@ -113,5 +113,55 @@
   color: #fff;
 }
 /*-------------online---------*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+  .coursesCard .items {
+    padding: 26px;
+  }
+  .coursesCard .text h1 {
+    font-size: 26px;
+    line-height: 38px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .coursesCard .content {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .coursesCard .text {
+    margin-left: 0;
+    text-align: center;
+  }
+  .coursesCard .details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    align-items: center;
+    justify-items: center;
+  }
+  .coursesCard .details .box {
+    justify-content: center;
+  }
+  .online .box {
+    padding: 26px 18px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .coursesCard {
+    padding: 30px 0;
+  }
+  .coursesCard .items {
+    padding: 22px 18px;
+  }
+  .coursesCard .text h1 {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  .coursesCard .details {
+    grid-template-columns: 1fr;
+  }
+  .coursesCard .price,
+  .coursesCard button {
+    width: 100%;
+    text-align: center;
+  }
 }
