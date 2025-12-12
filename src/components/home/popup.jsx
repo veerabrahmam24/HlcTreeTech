@@ -24,7 +24,7 @@ export default function Popup({
   onClose = () => {},
 }) {
   useEffect(() => {
-    emailjs.init("yLmM8pYJN7tYlL9Iq");
+    emailjs.init("tyj2mjcSSRNT3poKH");
   }, []);
 
   // basic fields
@@ -84,7 +84,7 @@ export default function Popup({
     };
 
     emailjs
-      .send("service_7ueq0ke", "template_oa3fsxl", formData)
+      .send("service_3tefgzd", "template_8zpkrs4", formData)
       .then(() => {
         alert("Thank you! We received your request.");
         onAction(formData);
