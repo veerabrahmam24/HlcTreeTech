@@ -1,8 +1,16 @@
-import React from "react"
+import React, { useState } from "react"
 import "./courses.css"
 import { coursesCard } from "../../dummydata"
+import Popup from "../home/popup"
 
 const CoursesCard = () => {
+  const [popupOpen, setPopupOpen] = useState(false)
+
+  function handlePopupSubmit(formData) {
+    console.log("Form submitted from popup:", formData)
+    setPopupOpen(false)
+  }
+
   return (
     <>
       <section className='coursesCard'>
@@ -47,11 +55,16 @@ const CoursesCard = () => {
                   {val.priceAll} / {val.pricePer}
                 </h3>
               </div> */}
-              <button className='outline-btn' >ENROLL NOW !</button>
+              <button className='outline-btn' onClick={() => setPopupOpen(true)}>ENROLL NOW !</button>
             </div>
           ))}
         </div>
       </section>
+      <Popup
+        open={popupOpen}
+        onClose={() => setPopupOpen(false)}
+        onAction={(formData) => handlePopupSubmit(formData)}
+      />
     </>
   )
 }
