@@ -285,8 +285,6 @@ function LearningPath() {
                 <span>REST API</span>
                 <span>TypeScript</span>
                 <span>AI</span>
-                <span>TypeScript2</span>
-                 <span>TypeScript23</span>
               </div>
               <div className="lp-code-stage">
                 <div className="lp-full-text">

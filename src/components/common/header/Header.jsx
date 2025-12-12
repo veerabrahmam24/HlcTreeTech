@@ -1,25 +1,34 @@
-import React, { useState } from "react"
-import { Link } from "react-router-dom"
-import Head from "./Head"
-import "./header.css"
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Head from "./Head";
+import "./header.css";
 
 const Header = () => {
-  const [click, setClick] = useState(false)
+  const [click, setClick] = useState(false);
 
   return (
     <>
       <Head />
       <header>
-        <nav className='flexSB'>
-          <ul className={click ? "mobile-nav" : "flexSB "} onClick={() => setClick(false)}>
+        <nav className="flexSB">
+          <ul
+            className={click ? "mobile-nav" : "flexSB "}
+            onClick={() => setClick(false)}
+          >
             <li>
-             <a href='/' className='nav-link'>Home</a>
-              </li>
-            <li>
-              <a href='/courses' className='nav-link'>All Courses</a>
+              <a href="/" className="nav-link">
+                Home
+              </a>
             </li>
             <li>
-              <a href='/about' className='nav-link'>About</a>
+              <a href="/courses" className="nav-link">
+                All Courses
+              </a>
+            </li>
+            <li>
+              <a href="/about" className="nav-link">
+                About
+              </a>
             </li>
             {/* <li>
               <Link to='/team'>Team</Link>
@@ -34,16 +43,32 @@ const Header = () => {
               <Link to='/contact'>Contact</Link>
             </li> */}
           </ul>
-          <div className='start'>
+          {/* <div className='start'>
             <div className='button'>GET IN TOUCH</div>
+          </div> */}
+          <div className="start">
+            <a
+              href="https://wa.me/919059663311"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="whatsapp-floating-btn"
+            >
+              <i className="fa-brands fa-whatsapp"></i>
+              Get in Touch
+            </a>
           </div>
-          <button className='toggle' onClick={() => setClick(!click)}>
-            {click ? <i className='fa fa-times'> </i> : <i className='fa fa-bars'></i>}
+
+          <button className="toggle" onClick={() => setClick(!click)}>
+            {click ? (
+              <i className="fa fa-times"> </i>
+            ) : (
+              <i className="fa fa-bars"></i>
+            )}
           </button>
         </nav>
       </header>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

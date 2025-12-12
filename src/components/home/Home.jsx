@@ -15,7 +15,7 @@ const Home = () => {
        <LearningPath />
       <HAbout />
       {/* <Testimonal /> */}
-      <Hblog />
+      {/* <Hblog /> */}
       {/* <Hprice /> */}
     </>
   )
