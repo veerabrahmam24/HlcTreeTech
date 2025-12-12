@@ -23,17 +23,19 @@ const Footer = () => {
             <h1>HLC Tree Tech</h1>
             {/* <span>ONLINE EDUCATION & LEARNING</span> */}
             <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-           <i className='fab fa-facebook-f icon'></i>
-            </a>
-          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-           <i className='fab fa-twitter icon'></i>
-           </a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-            <i className='fab fa-instagram icon'></i>
-           </a>
+            <div className='socials'>
+              <a href='https://www.facebook.com/profile.php?id=61584417224002' target='_blank' rel='noopener noreferrer' aria-label='Facebook'>
+                <i className='fab fa-facebook-f icon'></i>
+              </a>
+              <a href='https://www.youtube.com/@hlctechsolutions?si=ESsaKrf7-TpW9pfE' target='_blank' rel='noopener noreferrer' aria-label='Twitter'>
+                <i className='fab fa-youtube icon'></i>
+              </a>
+              <a href='https://www.instagram.com/hlc_tree_technologies?idsh=MWg5eWx0MXhhZ2Fodg==' target='_blank' rel='noopener noreferrer' aria-label='Instagram'>
+                <i className='fab fa-instagram icon'></i>
+              </a>
+            </div>
           </div>
-          <div className='box link'>
+          {/* <div className='box link'>
             <h3>Explore</h3>
             <ul>
               <li>About Us</li>
@@ -42,8 +44,8 @@ const Footer = () => {
               <li>Blog</li>
               <li>Contact us</li>
             </ul>
-          </div>
-          <div className='box link'>
+          </div> */}
+          {/* <div className='box link'>
             <h3>Quick Links</h3>
             <ul>
               <li>Contact Us</li>
@@ -52,7 +54,7 @@ const Footer = () => {
               <li>Privacy</li>
               <li>Feedbacks</li>
             </ul>
-          </div>
+          </div> */}
           <div className='box'>
             <h3>Recent Post</h3>
             {blog.slice(0, 3).map((val) => (
@@ -61,14 +63,16 @@ const Footer = () => {
                   <img src={val.cover} alt='' />
                 </div>
                 <div className='text'>
-                  <span>
-                    <i className='fa fa-calendar-alt'></i>
-                    <label htmlFor=''>{val.date}</label>
-                  </span>
-                  <span>
-                    <i className='fa fa-user'></i>
-                    <label htmlFor=''>{val.type}</label>
-                  </span>
+                  <div className='meta'>
+                    <span>
+                      <i className='fa fa-calendar-alt'></i>
+                      <label htmlFor=''>{val.date}</label>
+                    </span>
+                    <span>
+                      <i className='fa fa-user'></i>
+                      <label htmlFor=''>{val.type}</label>
+                    </span>
+                  </div>
                   <h4>{val.title.slice(0, 40)}...</h4>
                 </div>
               </div>

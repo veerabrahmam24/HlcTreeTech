@@ -1,5 +1,5 @@
 import "./App.css"
-import Header from "./components/common/header/Header"
+import Header from "./components/common/header/Head"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import About from "./components/about/About"
 import CourseHome from "./components/allcourses/CourseHome"
@@ -14,6 +14,7 @@ function App() {
     <>
       <Router>
         <Header />
+        <div className="main-content">
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/about' component={About} />
@@ -23,6 +24,7 @@ function App() {
           <Route exact path='/journal' component={Blog} />
           <Route exact path='/contact' component={Contact} />
         </Switch>
+        </div>
         <Footer />
       </Router>
     </>

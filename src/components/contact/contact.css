@@ -53,3 +53,14 @@ form .flexSB input:nth-child(1) {
     width: 100%;
   }
 }
+@media screen and (max-width: 576px) {
+  .contacts .right {
+    padding: 28px 16px;
+  }
+  form .flexSB {
+    flex-direction: column;
+  }
+  form .flexSB input:nth-child(1) {
+    margin-right: 0;
+  }
+}
