@@ -22,7 +22,7 @@ const Footer = () => {
           <div className='box logo'>
             <h1>HLC Tree Tech</h1>
             {/* <span>ONLINE EDUCATION & LEARNING</span> */}
-            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            <p>Learn Today. Build Your Tomorrow. With Our Support.</p>
             <div className='socials'>
               <a href='https://www.facebook.com/profile.php?id=61584417224002' target='_blank' rel='noopener noreferrer' aria-label='Facebook'>
                 <i className='fab fa-facebook-f icon'></i>

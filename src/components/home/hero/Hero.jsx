@@ -17,7 +17,7 @@ const Hero = () => {
         <div className='container'>
           <div className='row'>
             <Heading subtitle='WELCOME TO HLC' title='Best Online Education Expertise' />
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            <p>At HLC Tree Technologies, we provide hands-on training, expert guidance, and real-world learning to help you build a strong tech career.</p>
             {/* <div className='button'>
               <button className='primary-btn'>
                 GET STARTED NOW <i className='fa fa-long-arrow-alt-right'></i>
@@ -31,8 +31,8 @@ const Hero = () => {
       </section>
        <Popup
         open={popupOpen}
-        onClose={() => setPopupOpen(false)}          // ← important: closes when cross clicked
-        onAction={(formData) => handlePopupSubmit(formData)} // receives form data on submit
+        onClose={() => setPopupOpen(false)}          
+        onAction={(formData) => handlePopupSubmit(formData)}
       />
 
       <div className='margin'></div>

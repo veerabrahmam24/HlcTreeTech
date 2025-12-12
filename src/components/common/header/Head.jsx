@@ -158,8 +158,8 @@ const HeadNew = () => {
       {/* MARQUEE SCROLL BAR */}
       <div className="hn-scroll">
         <div className="hn-scroll-content">
-          Welcome to HLC Tree Technologies — Admissions Open | New Batches Starting Soon |
-          Contact Support for Assistance
+          HLC Tree Technologies: Admissions Now Open for Our Career-Focused Programs. 
+          New Batch Starts on the 15th Dec. Enroll Today and Contact Support for Assistance.
         </div>
       </div>
     </>
