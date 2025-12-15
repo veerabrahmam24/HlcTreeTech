@@ -1,10 +1,18 @@
-import React from "react"
+import React, {useState} from "react"
 import OnlineCourses from "../allcourses/OnlineCourses"
 import Heading from "../common/heading/Heading"
 import "../allcourses/courses.css"
 import { coursesCard } from "../../dummydata"
+import Popup from "../home/popup"
 
 const HAbout = () => {
+    const [popupOpen, setPopupOpen] = useState(false)
+
+    function handlePopupSubmit(formData) {
+    console.log("Form submitted from popup:", formData)
+    setPopupOpen(false)
+  }
+  
   return (
     <>
       <section className='homeAbout'>
@@ -54,7 +62,8 @@ const HAbout = () => {
                       {val.priceAll} / {val.pricePer}
                     </h3>
                   </div> */}
-                  <button className='outline-btn'>ENROLL NOW !</button>
+                  {/* <button className='outline-btn'>ENROLL NOW !</button> */}
+                   <button className='outline-btn' onClick={() => setPopupOpen(true)}>ENROLL NOW !</button>
                 </div>
               ))}
             </div>
@@ -62,6 +71,11 @@ const HAbout = () => {
         </div>
         <OnlineCourses />
       </section>
+      <Popup
+              open={popupOpen}
+              onClose={() => setPopupOpen(false)}
+              onAction={(formData) => handlePopupSubmit(formData)}
+            />
     </>
   )
 }

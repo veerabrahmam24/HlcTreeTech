@@ -83,11 +83,11 @@ const Footer = () => {
             <ul>
               <li>
                 <i className='fa fa-map'></i>
-                  2nd floor, 90/3, Outer Ring Rd, opp. to Innovative Multiplex, above Cream Stone, CKB Layout, Chandra Layout, Marathahalli, Bengaluru, Karnataka 560037
+                  1st Main Road, Beside Sivaram Biriyani, Outer Ring Rd, Vivekanandda Layout, Chandra Layout, Marathahalli, Bengaluru, Karnataka 560037
               </li>
               <li>
                 <i className='fa fa-phone-alt'></i>
-                +91 123456789
+                +91 9606746630
               </li>
               <li>
                 <i className='fa fa-paper-plane'></i>
