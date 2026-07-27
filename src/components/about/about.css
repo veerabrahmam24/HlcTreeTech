@@ -1,108 +1,210 @@
+/* =====================================================
+   ABOUT SECTION — White/Blue Theme
+   ===================================================== */
+
+/* ---- About Home (side-by-side layout) ---- */
 .aboutHome {
-  height: auto;
+  background: #f8faff;
+  padding: 90px 0;
+  position: relative;
+  overflow: hidden;
 }
+
 .aboutHome #heading {
   text-align: left;
-  padding: 0;
+  padding: 0 0 28px;
 }
+
 .aboutHome .left img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(37, 99, 235, 0.12);
+  border: 1px solid #e2e8f0;
 }
+
 .aboutHome .right {
-  padding: 80px 50px;
+  padding: 60px 50px;
+  position: relative;
+  z-index: 1;
 }
+
 .aboutHome .items {
-  margin-top: 50px;
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
+
 .aboutHome .item {
-  background-color: #fff;
-  margin-top: 30px;
-  padding: 20px;
-  transition: 0.5s;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 20px 22px;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(37, 99, 235, 0.06);
 }
-.aboutHome .img {
-  width: 200px;
-}
-.aboutHome img {
-  width: 70px;
-  height: 70px;
-}
-.aboutHome .item h2 {
-  font-size: 20px;
-  margin-bottom: 15px;
-}
-.aboutHome .item p {
-  color: #999999;
+.aboutHome .item::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #2563eb, #3b82f6);
+  border-radius: 3px 0 0 3px;
+  opacity: 0;
+  transition: 0.3s ease;
 }
 .aboutHome .item:hover {
-  background-color: #1eb2a6;
-  color: #fff;
-  cursor: pointer;
-  box-shadow: 0 5px 25px -2px rgb(0 0 0 / 6%);
+  border-color: rgba(37, 99, 235, 0.3);
+  transform: translateX(6px);
+  box-shadow: 0 8px 28px rgba(37, 99, 235, 0.12);
+}
+.aboutHome .item:hover::before {
+  opacity: 1;
+}
+
+.aboutHome .img {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  padding: 10px;
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+}
+.aboutHome .img img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.aboutHome .text {}
+.aboutHome .item h2 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 6px;
+  font-family: 'Poppins', sans-serif;
+}
+.aboutHome .item p {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
 }
 .aboutHome .item:hover p {
-  color: #fff;
+  color: #475569;
 }
-/*----------awrapper------------*/
+
+/* ---- Awrapper Stats (with awrapper.webp + blue overlay) ---- */
 .awrapper {
   background-image: url("../../../public/images/awrapper.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 30vh;
-  color: #fff;
-}
-.awrapper .box {
+  background-attachment: scroll;
+  position: relative;
   padding: 70px 0;
 }
-.awrapper img {
-  margin-right: 30px;
+.awrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(37, 99, 235, 0.88) 0%,
+    rgba(15, 23, 42, 0.90) 100%
+  );
 }
+
+.awrapper .container {
+  position: relative;
+  z-index: 1;
+}
+
+.awrapper .box {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 24px 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+.awrapper .box:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.awrapper img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: brightness(0) invert(1) opacity(0.9);
+}
+
 .awrapper h1 {
-  font-size: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
 }
 .awrapper h3 {
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 4px;
 }
-/*----------awrapper------------*/
+
+/* ---- Responsive ---- */
 @media screen and (max-width: 1024px) {
-  .aboutHome .right {
-    padding: 50px 30px;
-  }
-  .aboutHome .item {
-    align-items: flex-start;
-    gap: 14px;
-  }
-  .awrapper .box {
-    padding: 50px 0;
-  }
+  .aboutHome .right { padding: 40px 30px; }
 }
+
 @media screen and (max-width: 768px) {
+  .aboutHome {
+    padding: 60px 0;
+  }
   .aboutHome .container {
     flex-direction: column-reverse;
+    gap: 0;
   }
-  .aboutHome .row {
-    width: 100%;
+  .aboutHome .row { width: 100%; }
+  .aboutHome .left img {
+    border-radius: 14px;
+    height: 260px;
+    object-position: top;
   }
-  .awrapper {
-    height: 50vh;
-  }
-  .aboutHome .item {
-    flex-direction: column;
-  }
+  .awrapper .box { flex-direction: column; text-align: center; gap: 10px; }
+  .awrapper img { margin: 0 auto; }
 }
+
 @media screen and (max-width: 576px) {
-  .aboutHome .right {
-    padding: 36px 18px;
-  }
-  .aboutHome .items {
-    margin-top: 30px;
-  }
-  .awrapper {
-    height: auto;
-    padding: 32px 0;
-  }
+  .aboutHome { padding: 42px 0; }
+  .aboutHome .right { padding: 28px 0 0; }
+  .aboutHome .items { gap: 12px; margin-top: 24px; }
+  .aboutHome .item { padding: 16px; gap: 14px; }
+  .aboutHome .img { width: 50px; height: 50px; }
+  .aboutHome .img img { width: 28px; height: 28px; }
+  .aboutHome .item h2 { font-size: 15px; }
+  .awrapper { padding: 40px 0; }
+  .awrapper .box { padding: 18px 14px; gap: 8px; }
+  .awrapper h1 { font-size: clamp(24px, 7vw, 36px); }
+  .awrapper h3 { font-size: 13px; }
 }

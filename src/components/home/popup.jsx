@@ -107,45 +107,53 @@ export default function Popup({
         right: 22,
         zIndex: 100000,
         width: 370,
-        maxWidth: "calc(100% - 40px)",
-        fontFamily: "inherit",
+        maxWidth: "calc(100% - 32px)",
+        fontFamily: "'Inter', sans-serif",
       }}
     >
       <div
         style={{
           position: "relative",
-          padding: 12,
-          borderRadius: 14,
+          padding: 14,
+          borderRadius: 16,
           background: "#ffffff",
-          color: "#051014",
-          border: "1px solid rgba(0,0,0,0.08)",
-          boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
+          color: "#1e293b",
+          border: "1px solid #e2e8f0",
+          boxShadow: "0 20px 60px rgba(37,99,235,0.15), 0 0 0 1px rgba(37,99,235,0.08)",
+          backdropFilter: "blur(8px)",
         }}
       >
-        {/* <button
+        <button
           onClick={onClose}
           style={{
             position: "absolute",
-            top: 8,
-            right: 8,
-            background: "transparent",
-            border: "none",
+            top: 10,
+            right: 10,
+            width: 28,
+            height: 28,
+            background: "#f1f5f9",
+            border: "1px solid #e2e8f0",
             cursor: "pointer",
-            padding: 4,
-            borderRadius: 6,
-            color: "#333",
+            borderRadius: "50%",
+            color: "#64748b",
+            fontSize: 14,
+            fontWeight: 700,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            lineHeight: 1,
           }}
         >
-          X
-        </button> */}
+          ✕
+        </button>
 
-        <h3 style={{ margin: 0, fontSize: 17, fontWeight: 700 }}>{title}</h3>
-        <p style={{ margin: "6px 0 12px", fontSize: 13, color: "#444" }}>
+        <h3 style={{ margin: 0, fontSize: 16, fontWeight: 700, fontFamily: "'Poppins',sans-serif", color: "#2563eb" }}>{title}</h3>
+        <p style={{ margin: "6px 0 12px", fontSize: 13, color: "#64748b", lineHeight: 1.5 }}>
           {subtitle}
         </p>
 
         <form onSubmit={handleSubmit}>
-          <label style={{ fontSize: 12 }}>Name</label>
+          <label style={{ fontSize: 12, color: "#475569" }}>Name</label>
           <input
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -155,7 +163,7 @@ export default function Popup({
           />
           {errors.name && errorStyle(errors.name)}
 
-          <label style={{ fontSize: 12 }}>Email</label>
+          <label style={{ fontSize: 12, color: "#475569" }}>Email</label>
           <input
             type="email"
             value={email}
@@ -166,7 +174,7 @@ export default function Popup({
           />
           {errors.email && errorStyle(errors.email)}
 
-          <label style={{ fontSize: 12 }}>Contact Number</label>
+          <label style={{ fontSize: 12, color: "#475569" }}>Contact Number</label>
           <input
             value={phone}
             onChange={(e) => {
@@ -179,7 +187,7 @@ export default function Popup({
           />
           {errors.phone && errorStyle(errors.phone)}
 
-          <label style={{ fontSize: 12 }}>What do you want?</label>
+          <label style={{ fontSize: 12, color: "#475569" }}>What do you want?</label>
           <select
             value={purpose}
             onChange={(e) => setPurpose(e.target.value)}
@@ -192,7 +200,7 @@ export default function Popup({
 
           {purpose === "Training" && (
             <>
-              <label style={{ fontSize: 12 }}>Choose Course</label>
+              <label style={{ fontSize: 12, color: "#475569" }}>Choose Course</label>
               <select
                 value={trainingCourse}
                 onChange={(e) => setTrainingCourse(e.target.value)}
@@ -209,7 +217,7 @@ export default function Popup({
 
           {purpose === "Work Support" && (
             <>
-              <label style={{ fontSize: 12 }}>Experience (Years)</label>
+              <label style={{ fontSize: 12, color: "#475569" }}>Experience (Years)</label>
               <input
                 value={experienceYears}
                 onChange={(e) => setExperienceYears(e.target.value)}
@@ -220,7 +228,7 @@ export default function Popup({
               />
               {errors.experienceYears && errorStyle(errors.experienceYears)}
 
-              <label style={{ fontSize: 12 }}>Hours of Support Needed</label>
+              <label style={{ fontSize: 12, color: "#475569" }}>Hours of Support Needed</label>
               <input
                 value={supportHours}
                 onChange={(e) => setSupportHours(e.target.value)}
@@ -235,7 +243,7 @@ export default function Popup({
 
           {purpose === "Freelancer" && (
             <>
-              <label style={{ fontSize: 12 }}>Project Category</label>
+              <label style={{ fontSize: 12, color: "#475569" }}>Project Category</label>
               <select
                 value={freelanceType}
                 onChange={(e) => setFreelanceType(e.target.value)}
@@ -274,38 +282,44 @@ export default function Popup({
 --------------------------------------------------- */
 const inputStyle = {
   width: "100%",
-  padding: "9px 10px",
+  padding: "9px 12px",
   borderRadius: 8,
-  border: "1px solid rgba(0,0,0,0.12)",
-  margin: "4px 0 6px",
+  border: "1px solid #e2e8f0",
+  background: "#f8faff",
+  color: "#1e293b",
+  margin: "4px 0 8px",
   fontSize: 13,
   outline: "none",
+  fontFamily: "'Inter',sans-serif",
 };
 
 const submitBtn = {
   padding: "10px 14px",
-  background: "#10b981",
+  background: "linear-gradient(135deg,#1d4ed8,#2563eb)",
   color: "white",
   fontWeight: 700,
   borderRadius: 8,
   border: "none",
   cursor: "pointer",
   flex: 1,
+  fontFamily: "'Inter',sans-serif",
+  boxShadow: "0 4px 15px rgba(37,99,235,0.3)",
 };
 
 const dismissBtn = {
   padding: "10px 14px",
-  background: "white",
-  color: "#333",
+  background: "#f1f5f9",
+  color: "#64748b",
   fontWeight: 500,
   borderRadius: 8,
-  border: "1px solid rgba(0,0,0,0.12)",
+  border: "1px solid #e2e8f0",
   cursor: "pointer",
   flex: 1,
+  fontFamily: "'Inter',sans-serif",
 };
 
 const errorStyle = (msg) => (
-  <div style={{ color: "#e53935", fontSize: 11, marginTop: -6, marginBottom: 6 }}>
+  <div style={{ color: "#f87171", fontSize: 11, marginTop: -4, marginBottom: 6 }}>
     {msg}
   </div>
 );

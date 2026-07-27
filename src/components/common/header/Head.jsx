@@ -159,7 +159,7 @@ const HeadNew = () => {
       <div className="hn-scroll">
         <div className="hn-scroll-content">
           HLC Tree Technologies: Admissions Now Open for Our Career-Focused Programs. 
-          New Batch Starts on the 15th Dec. Enroll Today and Contact Support for Assistance.
+          New Batch Starts on the 07th Mar. Enroll Today and Contact Support for Assistance.
         </div>
       </div>
     </>

@@ -83,7 +83,7 @@ const Footer = () => {
             <ul>
               <li>
                 <i className='fa fa-map'></i>
-                  1st Main Road, Beside Sivaram Biriyani, Outer Ring Rd, Vivekanandda Layout, Chandra Layout, Marathahalli, Bengaluru, Karnataka 560037
+                  1st Main Road, Biriyani Zone Back Side, Outer Ring Rd, Vivekanandda Layout, Chandra Layout, Marathahalli, Bengaluru, Karnataka 560037
               </li>
               <li>
                 <i className='fa fa-phone-alt'></i>

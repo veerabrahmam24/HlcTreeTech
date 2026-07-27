@@ -1,34 +1,116 @@
+/* =====================================================
+   BLOG SECTION — White/Blue Theme
+   ===================================================== */
+
+.blog {
+  background: #f8faff;
+}
+
+.blog .shadow {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 18px !important;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 2px 16px rgba(37, 99, 235, 0.07) !important;
+}
+.blog .shadow::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #1d4ed8, #3b82f6);
+  opacity: 0;
+  transition: 0.3s ease;
+  z-index: 1;
+}
+.blog .shadow:hover {
+  border-color: rgba(37, 99, 235, 0.25) !important;
+  transform: translateY(-6px);
+  box-shadow: 0 16px 44px rgba(37, 99, 235, 0.13) !important;
+}
+.blog .shadow:hover::before { opacity: 1; }
+
 .blog img {
   width: 100%;
-  height: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: all 0.4s ease;
 }
+.blog .shadow:hover img {
+  transform: scale(1.04);
+}
+
 .blog .text {
-  padding: 40px 30px;
+  padding: 24px 22px;
 }
-.blog h1 {
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 30px;
-  margin: 20px 0;
-  transition: 0.5s;
+
+.blog .category-tag {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
 }
-.blog h1:hover {
-  color: #1eb2a6;
-  cursor: pointer;
-}
+
 .blog span {
+  font-size: 10px;
+  font-weight: 700;
   text-transform: uppercase;
-  font-weight: 500;
-  color: #1eb2a6;
+  letter-spacing: 1.5px;
+  color: #2563eb;
+  background: #eff6ff;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  padding: 3px 10px;
+  border-radius: 999px;
 }
 .blog span label {
-  margin-left: 10px;
-  color: grey;
-  font-size: 14px;
+  margin-left: 0;
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  background: none;
+  border: none;
+  padding: 0;
 }
 .blog span:nth-last-child(1) label {
-  color: #1eb2a6;
+  color: #3b82f6;
 }
+
+.blog h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.45;
+  margin: 10px 0 12px;
+  color: #1e293b;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+.blog h1:hover {
+  color: #2563eb;
+}
+
 .blog p {
-  color: grey;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* ---- Responsive ---- */
+@media screen and (max-width: 768px) {
+  .blog img { height: 180px; }
+  .blog .text { padding: 20px 18px; }
+  .blog h1 { font-size: 16px; }
+}
+
+@media screen and (max-width: 576px) {
+  .blog img { height: 200px; }
+  .blog .text { padding: 18px 16px; }
+  .blog h1 { font-size: 15px; }
+  .blog p { font-size: 13px; }
 }
