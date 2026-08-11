@@ -154,6 +154,8 @@ button i { margin-left: 8px; }
   box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35);
 }
 .primary-btn:hover {
+  background: var(--primary);
+  color: #fff;
   transform: translateY(-2px);
   box-shadow: 0 8px 28px rgba(37, 99, 235, 0.45);
 }
@@ -171,6 +173,25 @@ button i { margin-left: 8px; }
   border-color: transparent;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+}
+
+.secondary-btn {
+  background: #f8f9fb;
+  color: #1d4ed8;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  transition: all 0.2s ease;
+}
+.secondary-btn:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.12);
+}
+
+.courseActionBtn {
+  min-width: 140px;
+  padding: 12px 24px;
 }
 
 /* =================== HEADINGS =================== */
