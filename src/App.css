@@ -102,7 +102,7 @@ li { list-style: none; }
 }
 
 /* =================== SPACING =================== */
-.padding { padding: 90px 0; }
+.padding { padding: 0; }
 
 /* =================== CARD =================== */
 .shadow {
@@ -154,6 +154,8 @@ button i { margin-left: 8px; }
   box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35);
 }
 .primary-btn:hover {
+  background: var(--primary);
+  color: #fff;
   transform: translateY(-2px);
   box-shadow: 0 8px 28px rgba(37, 99, 235, 0.45);
 }
@@ -171,6 +173,25 @@ button i { margin-left: 8px; }
   border-color: transparent;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+}
+
+.secondary-btn {
+  background: #f8f9fb;
+  color: #1d4ed8;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  transition: all 0.2s ease;
+}
+.secondary-btn:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.12);
+}
+
+.courseActionBtn {
+  min-width: 140px;
+  padding: 12px 24px;
 }
 
 /* =================== HEADINGS =================== */
@@ -220,6 +241,89 @@ p {
   height: 100vh;
   padding-top: 26%;
   text-align: center;
+}
+.back.back--plain {
+  background: none;
+  background-image: none;
+  position: relative;
+  z-index: 0;
+  height: auto;
+  padding-top: 40px;
+}
+.back.back--plain::before {
+  content: none;
+}
+.back.back--plain h1 {
+  color: #111827;
+  text-shadow: none;
+}
+/* Courses page: allow background to scroll while keeping the title centered */
+.back.back--courses {
+  background-attachment: scroll;
+  /* keep the hero background behavior but allow normal scroll */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+}
+.back.back--courses h1 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  text-align: center;
+  width: 100%;
+}
+.back.back--courses + .margin {
+  margin-top: 62vh;
+}
+
+@media screen and (max-width: 768px) {
+  .back.back--courses h1 {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    padding: 0 16px;
+  }
+  .back.back--courses + .margin { margin-top: 44vh; }
+}
+
+/* About page: same behavior as courses — background scrolls, title stays centered */
+.back.back--about {
+  background-attachment: scroll;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+}
+.back.back--about h1 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  text-align: center;
+  width: 100%;
+}
+.back.back--about + .margin {
+  margin-top: 62vh;
+}
+
+@media screen and (max-width: 768px) {
+  .back.back--about h1 {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    padding: 0 16px;
+  }
+  .back.back--about + .margin { margin-top: 44vh; }
 }
 .back::before {
   content: '';
@@ -312,7 +416,7 @@ p {
 }
 
 /* =================== MAIN CONTENT OFFSET =================== */
-.main-content { margin-top: 118px; }
+.main-content { margin-top: 0px; }
 
 @media (max-width: 768px) { .main-content { margin-top: 100px; } }
 @media (max-width: 480px) { .main-content { margin-top: 88px; } }
