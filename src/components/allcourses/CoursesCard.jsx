@@ -1,7 +1,10 @@
 import React, { useState } from "react"
+import { Link } from "react-router-dom"
 import "./courses.css"
 import { coursesCard } from "../../dummydata"
 import Popup from "../home/popup"
+
+const toSlug = (name) => name?.trim().toLowerCase().replace(/\s+/g, "-")
 
 const CoursesCard = () => {
   const [popupOpen, setPopupOpen] = useState(false)
@@ -35,7 +38,10 @@ const CoursesCard = () => {
                   </div>
                   <div className='course-tile-footer'>
                     <span className='course-per'>{val.pricePer}</span>
-                    <button className='primary-btn' onClick={() => setPopupOpen(true)}>Enroll Now</button>
+                    <div className='course-tile-actions'>
+                      <Link to={`/courses/${toSlug(val.coursesName)}`} className='outline-btn'>View course</Link>
+                      <button className='primary-btn' onClick={() => setPopupOpen(true)}>Enroll Now</button>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -144,7 +144,7 @@ export default function Popup({
             lineHeight: 1,
           }}
         >
-          ✕
+         ✕
         </button>
 
         <h3 style={{ margin: 0, fontSize: 16, fontWeight: 700, fontFamily: "'Hanken Grotesk',sans-serif", color: "#06b6d4" }}>{title}</h3>

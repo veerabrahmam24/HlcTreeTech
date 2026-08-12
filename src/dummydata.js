@@ -57,8 +57,8 @@ export const coursesCard = [
   },
   {
     id: 2,
-    icon: "fa-brands fa-angular",
-    coursesName: "Angular",
+    icon: "fa-brands fa-docker",
+    coursesName: "DevOps",
     courTeacher: [
       {
         dcover: "./images/stitch/courses-instructor-2.jpg",

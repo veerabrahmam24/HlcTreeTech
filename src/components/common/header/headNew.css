@@ -4,7 +4,7 @@
 
 :root {
   --hn-h: 90px;
-  --hn-scroll-h: 36px;
+  --hn-scroll-h: 42px;
   --hn-bg: rgba(255, 255, 255, 0.96);
   --hn-border: #e0e3e5;
   --hn-primary: #0f172a;
@@ -326,6 +326,7 @@ body {
   left: 0;
   right: 0;
   height: var(--hn-scroll-h);
+  min-height: var(--hn-scroll-h);
   background: linear-gradient(90deg, #ecfeff, #cffafe, #ecfeff);
   border-bottom: 1px solid rgba(6, 182, 212, 0.15);
   display: flex;
@@ -334,6 +335,8 @@ body {
   overflow: hidden;
   box-sizing: border-box;
 }
+.hn-scroll.project-scroll {
+background: linear-gradient(90deg, #FFEB3B, #CDDC39, #FFEB3B);}
 .hn-scroll-content {
   display: inline-block;
   white-space: nowrap;
@@ -343,6 +346,35 @@ body {
   color: #06b6d4;
   letter-spacing: 0.4px;
   animation: hn-marquee 22s linear infinite;
+}
+.hn-scroll-content.project-scroll-content {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  animation: none;
+  color: #111827;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.hn-scroll-highlight {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: #dc2626;
+  color: #fff;
+  font-weight: 800;
+  box-shadow: 0 4px 10px rgba(220, 38, 38, 0.25);
+  font-size: 1.05em;
+  white-space: nowrap;
 }
 @keyframes hn-marquee {
   0%   { transform: translateX(0); }
@@ -378,6 +410,8 @@ body {
   .hn-container { padding: 0 14px; }
   .hn-scroll-content { font-size: 12px; animation-duration: 18s; padding-left: 110%; }
   .hn-scroll { height: 32px; }
+  .hn-scroll.project-scroll { min-height: 54px; }
+  .hn-scroll-content.project-scroll-content { font-size: 15px; gap: 8px; }
 }
 
 @media (max-width: 480px) {
@@ -388,7 +422,9 @@ body {
   .hn-logo-wrap { gap: 9px; }
   .hn-container { padding: 0 10px; }
   .hn-scroll { height: 28px; }
+  .hn-scroll.project-scroll { min-height: 50px; }
   .hn-scroll-content { font-size: 11px; animation-duration: 16s; }
+  .hn-scroll-content.project-scroll-content { font-size: 13px; }
   .hn-hamburger { width: 36px; height: 30px; }
 }
 

@@ -48,10 +48,21 @@
 
 
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import "./headNew.css";
 
 const HeadNew = () => {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+  const isProjectPage = location.pathname === "/project";
+  const scrollText = isProjectPage ? (
+    <>
+      <span className="hn-scroll-highlight">Exclusive</span>{" "}
+      Summer Internships & Final Year Projects Available Now!
+    </>
+  ) : (
+    "HLC Tree Technologies: Admissions Now Open for Our Career-Focused Programs. New Batch Starts on the 07th Mar. Enroll Today and Contact Support for Assistance."
+  );
 
   return (
     <>
@@ -106,6 +117,11 @@ const HeadNew = () => {
               </a>
              </li>
              <li>
+               <a href="/project" className="nav-link">
+                 Project
+               </a>
+             </li>
+             <li>
                <a href="/works" className="nav-link">
                  Works
               </a>
@@ -153,6 +169,7 @@ const HeadNew = () => {
                 <li><a href="/" className="nav-link" onClick={() => setOpen(false)}>Home</a></li>
                 <li><a href="/courses" className="nav-link" onClick={() => setOpen(false)}>All Courses</a></li>
                 <li><a href="/about" className="nav-link" onClick={() => setOpen(false)}>About</a></li>
+                <li><a href="/project" className="nav-link" onClick={() => setOpen(false)}>Project</a></li>
                 <li><a href="/works" className="nav-link" onClick={() => setOpen(false)}>Works</a></li>
                 <li className="hn-mobile-group-label">Partnership</li>
                 <li><a href="/partnership" className="nav-link hn-mobile-sublink" onClick={() => setOpen(false)}>Partnership Overview</a></li>
@@ -179,10 +196,9 @@ const HeadNew = () => {
       </header>
 
       {/* MARQUEE SCROLL BAR */}
-      <div className="hn-scroll">
-        <div className="hn-scroll-content">
-          HLC Tree Technologies: Admissions Now Open for Our Career-Focused Programs. 
-          New Batch Starts on the 07th Mar. Enroll Today and Contact Support for Assistance.
+      <div className={`hn-scroll${isProjectPage ? " project-scroll" : ""}`}>
+        <div className={`hn-scroll-content${isProjectPage ? " project-scroll-content" : ""}`}>
+          {scrollText}
         </div>
       </div>
     </>
