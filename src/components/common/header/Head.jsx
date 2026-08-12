@@ -48,10 +48,21 @@
 
 
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import "./headNew.css";
 
 const HeadNew = () => {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+  const isProjectPage = location.pathname === "/project";
+  const scrollText = isProjectPage ? (
+    <>
+      <span className="hn-scroll-highlight">Exclusive</span>{" "}
+      Summer Internships & Final Year Projects Available Now!
+    </>
+  ) : (
+    "HLC Tree Technologies: Admissions Now Open for Our Career-Focused Programs. New Batch Starts on the 07th Mar. Enroll Today and Contact Support for Assistance."
+  );
 
   return (
     <>
@@ -105,6 +116,11 @@ const HeadNew = () => {
                  About
               </a>
              </li>
+             <li>
+               <a href="/project" className="nav-link">
+                 Project
+               </a>
+             </li>
               {/* <li><a href="#about">About</a></li>
               <li><a href="#courses">All Courses</a></li>
               <li><a href="#contact">Contact</a></li> */}
@@ -136,6 +152,7 @@ const HeadNew = () => {
                 <li><a href="/" className="nav-link" onClick={() => setOpen(false)}>Home</a></li>
                 <li><a href="/courses" className="nav-link" onClick={() => setOpen(false)}>All Courses</a></li>
                 <li><a href="/about" className="nav-link" onClick={() => setOpen(false)}>About</a></li>
+                <li><a href="/project" className="nav-link" onClick={() => setOpen(false)}>Project</a></li>
               </ul>
             </div>
 
@@ -160,6 +177,9 @@ const HeadNew = () => {
         <div className="hn-scroll-content">
           HLC Tree Technologies: Admissions Now Open for Our Career-Focused Programs. 
           New Batch Starts on the 22nd Aug. Enroll Today and Contact Support for Assistance.
+      <div className={`hn-scroll${isProjectPage ? " project-scroll" : ""}`}>
+        <div className={`hn-scroll-content${isProjectPage ? " project-scroll-content" : ""}`}>
+          {scrollText}
         </div>
       </div>
     </>

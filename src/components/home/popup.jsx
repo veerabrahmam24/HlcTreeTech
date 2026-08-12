@@ -129,14 +129,14 @@ export default function Popup({
             position: "absolute",
             top: 10,
             right: 10,
-            width: 28,
-            height: 28,
+            width: 27,
+            height: 27,
             background: "#f1f5f9",
             border: "1px solid #e2e8f0",
             cursor: "pointer",
             borderRadius: "50%",
             color: "#64748b",
-            fontSize: 14,
+            fontSize: 16,
             fontWeight: 700,
             display: "flex",
             alignItems: "center",
@@ -144,7 +144,7 @@ export default function Popup({
             lineHeight: 1,
           }}
         >
-          ✕
+         ✕
         </button>
 
         <h3 style={{ margin: 0, fontSize: 16, fontWeight: 700, fontFamily: "'Poppins',sans-serif", color: "#2563eb" }}>{title}</h3>
