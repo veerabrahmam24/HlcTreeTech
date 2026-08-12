@@ -13,51 +13,34 @@ const CoursesCard = () => {
 
   return (
     <>
-      <section className='coursesCard'>
-        <div className='container grid2'>
-          {coursesCard.map((val) => (
-            <div className='items'>
-              <div className='content flex'>
-                <div className='left'>
-                  <div className='img'>
-                    <img src={val.cover} alt='' />
-                  </div>
+      <section className='coursesCard padding' id='courses-catalog'>
+        <div className='container'>
+          <div className='courses-grid'>
+            {coursesCard.map((val) => (
+              <div className='course-tile shadow' key={val.coursesName}>
+                <div className='course-tile-media'>
+                  <div className='course-tile-icon'><i className={val.icon}></i></div>
+                  <span className='course-price-badge'>{val.priceAll}</span>
                 </div>
-                <div className='text'>
-                  <h1>{val.coursesName}</h1>
-                  <div className='rate'>
-                    <i className='fa fa-star'></i>
-                    <i className='fa fa-star'></i>
-                    <i className='fa fa-star'></i>
-                    <i className='fa fa-star'></i>
-                    <i className='fa fa-star'></i>
-                    <label htmlFor=''>(5.0)</label>
-                  </div>
-                  <div className='details'>
+                <div className='course-tile-body'>
+                  <h3>{val.coursesName}</h3>
+                  <div className='course-tile-meta'>
                     {val.courTeacher.map((details) => (
-                      <>
-                        <div className='box'>
-                          <div className='dimg'>
-                            <img src={details.dcover} alt='' />
-                          </div>
-                          <div className='para'>
-                            <h4>{details.name}</h4>
-                          </div>
-                        </div>
-                        <span>{details.totalTime}</span>
-                      </>
+                      <div className='course-instructor-row' key={details.name}>
+                        {details.dcover && <img src={details.dcover} alt={details.name} className='course-instructor-photo' />}
+                        <span className='course-instructor'>{details.name}</span>
+                        <span className='course-duration'>{details.totalTime}</span>
+                      </div>
                     ))}
+                  </div>
+                  <div className='course-tile-footer'>
+                    <span className='course-per'>{val.pricePer}</span>
+                    <button className='primary-btn' onClick={() => setPopupOpen(true)}>Enroll Now</button>
                   </div>
                 </div>
               </div>
-              {/* <div className='price'>
-                <h3>
-                  {val.priceAll} / {val.pricePer}
-                </h3>
-              </div> */}
-              <button className='outline-btn' onClick={() => setPopupOpen(true)}>ENROLL NOW !</button>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
       <Popup

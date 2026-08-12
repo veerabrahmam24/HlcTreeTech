@@ -1,44 +1,41 @@
 export const homeAbout = [
   {
     id: 1,
-    cover: "https://img.icons8.com/dotty/80/000000/storytelling.png",
+    icon: "fa-solid fa-laptop-code",
     title: "Online Courses",
     desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
   },
   {
-    id: 1,
-    cover: "https://img.icons8.com/ios/80/000000/diploma.png",
+    id: 2,
+    icon: "fa-solid fa-certificate",
     title: "Earn A Certificates",
     desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
   },
   {
-    id: 1,
-    cover: "https://img.icons8.com/ios/80/000000/athlete.png",
+    id: 3,
+    icon: "fa-solid fa-chalkboard-user",
     title: "Learn with Expert",
     desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
   },
 ];
 export const awrapper = [
   {
-    cover:
-      "https://img.icons8.com/external-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto/80/ffffff/external-graduation-education-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto.png",
-    data: "3,000",
+    icon: "fa-solid fa-graduation-cap",
+    data: "3,000+",
     title: "SUCCESS STORIES",
   },
-
   {
-    cover: "https://img.icons8.com/ios/80/ffffff/athlete.png",
+    icon: "fa-solid fa-users",
     data: "320",
     title: "TRUSTED TUTORS",
   },
   {
-    cover:
-      "https://img.icons8.com/external-outline-icons-maxicons/80/ffffff/external-calender-insurance-outline-outline-icons-maxicons.png",
-    data: "1,000",
+    icon: "fa-solid fa-calendar-days",
+    data: "1,000+",
     title: "SCHEDULES",
   },
   {
-    cover: "https://img.icons8.com/ios/80/ffffff/macbook-idea--v3.png",
+    icon: "fa-solid fa-book",
     data: "587",
     title: "COURSES",
   },
@@ -46,11 +43,11 @@ export const awrapper = [
 export const coursesCard = [
   {
     id: 1,
-    cover: "../images/courses/c5.png",
+    icon: "fa-brands fa-react",
     coursesName: "React JS",
     courTeacher: [
       {
-        dcover: "./images/back.webp",
+        dcover: "./images/stitch/courses-instructor-1.jpg",
         name: "by Arjun Sharma",
         totalTime: "50 lectures (190 hrs)",
       },
@@ -60,11 +57,11 @@ export const coursesCard = [
   },
   {
     id: 2,
-    cover: "../images/courses/c2.png",
+    icon: "fa-brands fa-angular",
     coursesName: "Angular",
     courTeacher: [
       {
-        dcover: "./images/back.webp",
+        dcover: "./images/stitch/courses-instructor-2.jpg",
         name: "by Priya Iyer",
         totalTime: "30 lectures (125 hrs)",
       },
@@ -74,11 +71,11 @@ export const coursesCard = [
   },
   {
     id: 3,
-    cover: "../images/courses/c7.png",
+    icon: "fa-brands fa-html5",
     coursesName: "HTML, CSS",
     courTeacher: [
       {
-        dcover: "./images/back.webp",
+        dcover: "./images/stitch/courses-instructor-3.jpg",
         name: "by Kavitha Reddy",
         totalTime: "50 lectures (50 hrs)",
       },
@@ -88,11 +85,11 @@ export const coursesCard = [
   },
   {
     id: 4,
-    cover: "../images/courses/c4.png",
+    icon: "fa-brands fa-node-js",
     coursesName: "Node Js",
     courTeacher: [
       {
-        dcover: "./images/back.webp",
+        dcover: null,
         name: "by Vikram Deshmukh",
         totalTime: "20 lectures (20 hrs)",
       },
@@ -102,11 +99,11 @@ export const coursesCard = [
   },
   {
     id: 5,
-    cover: "../images/courses/js.png",
+    icon: "fa-brands fa-js",
     coursesName: "JavaScript",
     courTeacher: [
       {
-        dcover: "./images/back.webp",
+        dcover: null,
         name: "by Sneha Kulkarni",
         totalTime: "100 lectures (150 hrs)",
       },
@@ -116,11 +113,11 @@ export const coursesCard = [
   },
   {
     id: 6,
-    cover: "../images/courses/c6.png",
+    icon: "fa-solid fa-robot",
     coursesName: "AI  ",
     courTeacher: [
       {
-        dcover: "./images/back.webp",
+        dcover: null,
         name: "by Rajesh Venkataraman",
         totalTime: "200 lectures (300 hrs)",
       },
@@ -130,11 +127,11 @@ export const coursesCard = [
   },
   {
     id: 7,
-    cover: "../images/courses/Data Science.png",
+    icon: "fa-solid fa-chart-line",
     coursesName: "Data Science",
     courTeacher: [
       {
-        dcover: "./images/back.webp",
+        dcover: null,
         name: "by Ananya Pillai",
         totalTime: "20 lectures (50 hrs)",
       },
@@ -144,11 +141,11 @@ export const coursesCard = [
   },
   {
     id: 8,
-    cover: "../images/courses/Data Engineering.png",
+    icon: "fa-solid fa-database",
     coursesName: "Data Engineering",
     courTeacher: [
       {
-        dcover: "./images/back.webp",
+        dcover: null,
         name: "by Manoj Tiwari",
         totalTime: "80 lectures (200 hrs)",
       },
@@ -158,11 +155,11 @@ export const coursesCard = [
   },
   {
     id: 9,
-    cover: "../images/courses/Data Analyst.png",
+    icon: "fa-solid fa-chart-bar",
     coursesName: "Data Analyst",
     courTeacher: [
       {
-        dcover: "./images/back.webp",
+        dcover: null,
         name: "by Deepika Nair",
         totalTime: "50 lectures (50 hrs)",
       },

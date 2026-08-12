@@ -1,14 +1,11 @@
 import React from "react"
-import { useLocation } from "react-router-dom"
 
-const Back = ({ title }) => {
-  const location = useLocation()
-
+const Back = ({ title, desc }) => {
   return (
     <>
       <section className='back'>
-        {/* <h2>Home / {location.pathname.split("/")[1]}</h2> */}
         <h1>{title}</h1>
+        {desc && <h2 className='back-desc'>{desc}</h2>}
       </section>
       <div className='margin'></div>
     </>

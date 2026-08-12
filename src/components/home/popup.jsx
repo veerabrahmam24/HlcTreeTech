@@ -117,9 +117,9 @@ export default function Popup({
           padding: 14,
           borderRadius: 16,
           background: "#ffffff",
-          color: "#1e293b",
-          border: "1px solid #e2e8f0",
-          boxShadow: "0 20px 60px rgba(37,99,235,0.15), 0 0 0 1px rgba(37,99,235,0.08)",
+          color: "#0f172a",
+          border: "1px solid #e0e3e5",
+          boxShadow: "0 20px 60px rgba(15,23,42,0.15), 0 0 0 1px rgba(6,182,212,0.12)",
           backdropFilter: "blur(8px)",
         }}
       >
@@ -131,11 +131,11 @@ export default function Popup({
             right: 10,
             width: 28,
             height: 28,
-            background: "#f1f5f9",
-            border: "1px solid #e2e8f0",
+            background: "#f2f4f6",
+            border: "1px solid #e0e3e5",
             cursor: "pointer",
             borderRadius: "50%",
-            color: "#64748b",
+            color: "#45464d",
             fontSize: 14,
             fontWeight: 700,
             display: "flex",
@@ -147,13 +147,13 @@ export default function Popup({
           ✕
         </button>
 
-        <h3 style={{ margin: 0, fontSize: 16, fontWeight: 700, fontFamily: "'Poppins',sans-serif", color: "#2563eb" }}>{title}</h3>
-        <p style={{ margin: "6px 0 12px", fontSize: 13, color: "#64748b", lineHeight: 1.5 }}>
+        <h3 style={{ margin: 0, fontSize: 16, fontWeight: 700, fontFamily: "'Hanken Grotesk',sans-serif", color: "#06b6d4" }}>{title}</h3>
+        <p style={{ margin: "6px 0 12px", fontSize: 13, color: "#45464d", lineHeight: 1.5 }}>
           {subtitle}
         </p>
 
         <form onSubmit={handleSubmit}>
-          <label style={{ fontSize: 12, color: "#475569" }}>Name</label>
+          <label style={{ fontSize: 12, color: "#45464d" }}>Name</label>
           <input
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -163,7 +163,7 @@ export default function Popup({
           />
           {errors.name && errorStyle(errors.name)}
 
-          <label style={{ fontSize: 12, color: "#475569" }}>Email</label>
+          <label style={{ fontSize: 12, color: "#45464d" }}>Email</label>
           <input
             type="email"
             value={email}
@@ -174,7 +174,7 @@ export default function Popup({
           />
           {errors.email && errorStyle(errors.email)}
 
-          <label style={{ fontSize: 12, color: "#475569" }}>Contact Number</label>
+          <label style={{ fontSize: 12, color: "#45464d" }}>Contact Number</label>
           <input
             value={phone}
             onChange={(e) => {
@@ -187,7 +187,7 @@ export default function Popup({
           />
           {errors.phone && errorStyle(errors.phone)}
 
-          <label style={{ fontSize: 12, color: "#475569" }}>What do you want?</label>
+          <label style={{ fontSize: 12, color: "#45464d" }}>What do you want?</label>
           <select
             value={purpose}
             onChange={(e) => setPurpose(e.target.value)}
@@ -200,7 +200,7 @@ export default function Popup({
 
           {purpose === "Training" && (
             <>
-              <label style={{ fontSize: 12, color: "#475569" }}>Choose Course</label>
+              <label style={{ fontSize: 12, color: "#45464d" }}>Choose Course</label>
               <select
                 value={trainingCourse}
                 onChange={(e) => setTrainingCourse(e.target.value)}
@@ -217,7 +217,7 @@ export default function Popup({
 
           {purpose === "Work Support" && (
             <>
-              <label style={{ fontSize: 12, color: "#475569" }}>Experience (Years)</label>
+              <label style={{ fontSize: 12, color: "#45464d" }}>Experience (Years)</label>
               <input
                 value={experienceYears}
                 onChange={(e) => setExperienceYears(e.target.value)}
@@ -228,7 +228,7 @@ export default function Popup({
               />
               {errors.experienceYears && errorStyle(errors.experienceYears)}
 
-              <label style={{ fontSize: 12, color: "#475569" }}>Hours of Support Needed</label>
+              <label style={{ fontSize: 12, color: "#45464d" }}>Hours of Support Needed</label>
               <input
                 value={supportHours}
                 onChange={(e) => setSupportHours(e.target.value)}
@@ -243,7 +243,7 @@ export default function Popup({
 
           {purpose === "Freelancer" && (
             <>
-              <label style={{ fontSize: 12, color: "#475569" }}>Project Category</label>
+              <label style={{ fontSize: 12, color: "#45464d" }}>Project Category</label>
               <select
                 value={freelanceType}
                 onChange={(e) => setFreelanceType(e.target.value)}
@@ -284,9 +284,9 @@ const inputStyle = {
   width: "100%",
   padding: "9px 12px",
   borderRadius: 8,
-  border: "1px solid #e2e8f0",
-  background: "#f8faff",
-  color: "#1e293b",
+  border: "1px solid #e0e3e5",
+  background: "#f7f9fb",
+  color: "#0f172a",
   margin: "4px 0 8px",
   fontSize: 13,
   outline: "none",
@@ -295,7 +295,7 @@ const inputStyle = {
 
 const submitBtn = {
   padding: "10px 14px",
-  background: "linear-gradient(135deg,#1d4ed8,#2563eb)",
+  background: "linear-gradient(135deg,#0f172a,#06b6d4)",
   color: "white",
   fontWeight: 700,
   borderRadius: 8,
@@ -303,16 +303,16 @@ const submitBtn = {
   cursor: "pointer",
   flex: 1,
   fontFamily: "'Inter',sans-serif",
-  boxShadow: "0 4px 15px rgba(37,99,235,0.3)",
+  boxShadow: "0 4px 15px rgba(6,182,212,0.3)",
 };
 
 const dismissBtn = {
   padding: "10px 14px",
-  background: "#f1f5f9",
-  color: "#64748b",
+  background: "#f2f4f6",
+  color: "#45464d",
   fontWeight: 500,
   borderRadius: 8,
-  border: "1px solid #e2e8f0",
+  border: "1px solid #e0e3e5",
   cursor: "pointer",
   flex: 1,
   fontFamily: "'Inter',sans-serif",

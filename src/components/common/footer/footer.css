@@ -1,9 +1,9 @@
 /* =====================================================
-   FOOTER — White/Blue Theme (dark footer)
+   FOOTER — Kinetic Enterprise Education (Slate Navy | Cyan)
    ===================================================== */
 
 .newletter {
-  background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 60%, #3b82f6 100%);
+  background: linear-gradient(135deg, #020617 0%, #06b6d4 60%, #22d3ee 100%);
   padding: 50px 0;
   color: #fff;
   position: relative;
@@ -19,7 +19,7 @@
   color: #fff;
   font-size: 26px;
   font-weight: 600;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Hanken Grotesk', sans-serif;
   margin-bottom: 10px;
   position: relative;
   z-index: 1;
@@ -52,7 +52,7 @@
 .newletter input::placeholder { color: rgba(255, 255, 255, 0.6); }
 .newletter i {
   padding: 14px 18px;
-  color: #2563eb;
+  color: #06b6d4;
   background: #ffffff;
   cursor: pointer;
   font-size: 16px;
@@ -72,7 +72,7 @@ footer::before {
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #2563eb, #3b82f6, transparent);
+  background: linear-gradient(90deg, transparent, #06b6d4, #22d3ee, transparent);
 }
 
 footer .container {
@@ -96,7 +96,7 @@ footer .box {
 
 footer .box h1,
 footer .box h3 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Hanken Grotesk', sans-serif;
   margin: 0 0 10px 0;
   color: #e2e8f0;
 }
@@ -108,18 +108,18 @@ footer .logo h1 {
   color: #ffffff;
   margin-bottom: 8px;
 }
-footer .logo h1 span { color: #3b82f6; }
+footer .logo h1 span { color: #22d3ee; }
 footer .logo span {
   display: block;
   font-size: 11px;
-  color: #3b82f6;
+  color: #22d3ee;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 600;
   margin-bottom: 4px;
 }
 footer .logo p {
-  color: #64748b;
+  color: #94a3b8;
   font-size: 14px;
   line-height: 1.65;
   margin: 0 0 14px 0;
@@ -141,17 +141,17 @@ footer .logo .socials a {
   transition: all 0.25s ease;
 }
 footer .logo .socials a:hover {
-  background: #2563eb;
+  background: #06b6d4;
   border-color: transparent;
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 8px 20px rgba(6, 182, 212, 0.4);
 }
 footer .logo .icon {
   width: 100%;
   height: 100%;
   display: grid;
   place-items: center;
-  color: #64748b;
+  color: #94a3b8;
   font-size: 16px;
   background: none;
   border-radius: 0;
@@ -177,7 +177,7 @@ footer h3::after {
   position: absolute;
   bottom: 0; left: 0;
   width: 30px; height: 2px;
-  background: #2563eb;
+  background: #06b6d4;
   border-radius: 2px;
 }
 
@@ -187,15 +187,15 @@ footer ul {
 }
 footer ul li {
   font-size: 14px;
-  color: #64748b;
+  color: #94a3b8;
   transition: color 0.2s;
   cursor: pointer;
 }
-footer ul li:hover { color: #3b82f6; }
+footer ul li:hover { color: #22d3ee; }
 
 footer .link li::before {
   content: "→";
-  color: #2563eb;
+  color: #06b6d4;
   margin-right: 8px;
   font-size: 12px;
 }
@@ -226,14 +226,14 @@ footer .items .meta {
 footer .items span,
 footer .items i {
   font-size: 11px;
-  color: #3b82f6;
+  color: #22d3ee;
   text-transform: capitalize;
 }
 footer .items span { display: inline-flex; align-items: center; gap: 4px; }
 footer h4 {
   font-size: 13px;
   font-weight: 500;
-  color: #64748b;
+  color: #94a3b8;
   line-height: 1.45;
   transition: color 0.2s;
 }
@@ -252,7 +252,7 @@ footer .last ul li {
   line-height: 1.55;
 }
 footer .last i {
-  color: #2563eb;
+  color: #06b6d4;
   font-size: 15px;
   width: 20px;
   flex-shrink: 0;
@@ -267,7 +267,7 @@ footer .last i {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 .legal p { font-size: 13px; color: #475569; }
-.legal i { color: #2563eb; }
+.legal i { color: #06b6d4; }
 
 /* ---- Responsive ---- */
 @media screen and (max-width: 1024px) {

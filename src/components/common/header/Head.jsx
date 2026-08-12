@@ -105,9 +105,26 @@ const HeadNew = () => {
                  About
               </a>
              </li>
-              {/* <li><a href="#about">About</a></li>
-              <li><a href="#courses">All Courses</a></li>
-              <li><a href="#contact">Contact</a></li> */}
+             <li>
+               <a href="/works" className="nav-link">
+                 Works
+              </a>
+             </li>
+             <li className="hn-has-dropdown">
+               <a href="/partnership" className="nav-link">
+                 Partnership <i className="fa-solid fa-chevron-down hn-caret"></i>
+              </a>
+              <ul className="hn-dropdown">
+                <li><a href="/partnership" className="nav-link">Partnership Overview</a></li>
+                <li><a href="/partnership-model" className="nav-link">Partnership Model</a></li>
+                <li><a href="/talent-pool" className="nav-link">Talent Pool</a></li>
+              </ul>
+             </li>
+             <li>
+               <a href="/contact" className="nav-link">
+                 Contact
+              </a>
+             </li>
             </ul>
           </nav>
 
@@ -136,6 +153,12 @@ const HeadNew = () => {
                 <li><a href="/" className="nav-link" onClick={() => setOpen(false)}>Home</a></li>
                 <li><a href="/courses" className="nav-link" onClick={() => setOpen(false)}>All Courses</a></li>
                 <li><a href="/about" className="nav-link" onClick={() => setOpen(false)}>About</a></li>
+                <li><a href="/works" className="nav-link" onClick={() => setOpen(false)}>Works</a></li>
+                <li className="hn-mobile-group-label">Partnership</li>
+                <li><a href="/partnership" className="nav-link hn-mobile-sublink" onClick={() => setOpen(false)}>Partnership Overview</a></li>
+                <li><a href="/partnership-model" className="nav-link hn-mobile-sublink" onClick={() => setOpen(false)}>Partnership Model</a></li>
+                <li><a href="/talent-pool" className="nav-link hn-mobile-sublink" onClick={() => setOpen(false)}>Talent Pool</a></li>
+                <li><a href="/contact" className="nav-link" onClick={() => setOpen(false)}>Contact</a></li>
               </ul>
             </div>
 
