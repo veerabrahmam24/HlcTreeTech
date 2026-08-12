@@ -22,6 +22,8 @@ const PlacementPopup = ({ onClose }) => {
   return (
     <div className="placement-popup-overlay" onClick={handleOverlayClick}>
       <div className="placement-popup-card" role="dialog" aria-modal="true" onClick={handleCardClick}>
+        <div className="placement-popup-blob placement-popup-blob-1" aria-hidden="true"></div>
+        <div className="placement-popup-blob placement-popup-blob-2" aria-hidden="true"></div>
         <button
           className="placement-popup-close"
           onClick={(event) => {
@@ -40,15 +42,15 @@ const PlacementPopup = ({ onClose }) => {
               <span className="placement-popup-brand-name">Tree Technologies</span>
             </div>
             <p className="placement-popup-topline">Placement Assistance Program On</p>
-            <h1 className="placement-popup-title">
-              <strong>React</strong> <span className="placement-popup-divider">&</span> <strong>DevOps</strong>
-            </h1>
+            <h1 className="placement-popup-title">React &amp; DevOps</h1>
             <p className="placement-popup-description">
               Gain real-world skills, practical training, and placement support with HLC Tree Technologies.
             </p>
             <button className="placement-popup-button" type="button" onClick={openYoutubeLink}>
               New Batch Starting
             </button>
+          </div>
+          <div className="placement-popup-footer-band">
             <p className="placement-popup-note">Click anywhere in this popup to view our YouTube batch details.</p>
           </div>
         </div>

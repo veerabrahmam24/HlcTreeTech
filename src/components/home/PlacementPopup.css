@@ -14,12 +14,45 @@
   width: min(940px, 100%);
   max-width: 500px;
   background: var(--bg-card);
-  border-radius: var(--radius-lg);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.22);
+  border-radius: 32px;
+  box-shadow: 0 20px 50px rgba(6, 182, 212, 0.12);
   overflow: hidden;
   position: relative;
   cursor: pointer;
   margin: auto;
+}
+
+.placement-popup-blob {
+  position: absolute;
+  filter: blur(80px);
+  opacity: 0.6;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  animation: placementBlobMorph 8s ease-in-out infinite alternate;
+}
+
+.placement-popup-blob-1 {
+  width: 400px;
+  height: 400px;
+  background: var(--accent);
+  top: -100px;
+  left: -100px;
+}
+
+.placement-popup-blob-2 {
+  width: 500px;
+  height: 500px;
+  background: var(--primary-pale);
+  bottom: -150px;
+  right: -150px;
+  animation-duration: 10s;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes placementBlobMorph {
+  0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+  100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
 }
 
 .placement-popup-close {
@@ -37,7 +70,7 @@
   cursor: pointer;
   display: grid;
   place-items: center;
-  /* box-shadow: 0 8px 24px rgba(17, 45, 125, 0.12); */
+  z-index: 2;
 }
 
 .placement-popup-close:hover {
@@ -48,21 +81,21 @@
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   min-height: 420px;
+  position: relative;
+  z-index: 1;
 }
 
 .placement-popup-inner.placement-popup-no-image {
   grid-template-columns: 1fr;
+  min-height: 0;
 }
 
 .placement-popup-copy {
-  padding: 42px 42px 42px 52px;
+  padding: 32px 42px 0;
   display: grid;
   gap: 22px;
-  justify-content: start;
-}
-
-.placement-popup-copy-full {
-  padding-right: 52px;
+  justify-items: center;
+  text-align: center;
 }
 
 .placement-popup-image-wrap {
@@ -73,20 +106,21 @@
   display: inline-flex;
   align-items: center;
   gap: 14px;
-  margin-bottom: 12px;
+  justify-self: start;
 }
 
 .placement-popup-logo {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 65px;
-  height: 65px;
-  border-radius: var(--radius-lg);
+  width: 48px;
+  height: 48px;
+  border-radius: 30%;
   background: var(--grad-primary);
   color: #fff;
   font-weight: 800;
-  letter-spacing: 0.1em;
+  font-size: 14px;
+  letter-spacing: 0.06em;
 }
 
 .placement-popup-brand-name {
@@ -98,39 +132,20 @@
 .placement-popup-topline {
   margin: 0;
   color: var(--accent);
-  font-size: bold;
+  font-size: 13px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  font-weight: 700;
-
+  font-weight: 800;
 }
 
 .placement-popup-title {
   margin: 0;
   font-family: 'Hanken Grotesk', sans-serif;
-  font-size: clamp(2.8rem, 3.4vw, 4.8rem);
-  line-height: 0.95;
-  color: var(--text);
-  letter-spacing: -0.04em;
-  text-align: center;
-}
-
-.placement-popup-title strong {
-  display: block;
-  font-weight: bold;
-}
-
-.placement-popup-divider {
-  display: block;
-  width: 64px;
-  height: 64px;
-  margin: 18px auto;
-  border-radius: 50%;
-  background: var(--primary-pale);
-  color: var(--accent);
-  font-size: 2.4rem;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
   font-weight: 800;
-  line-height: 64px;
+  line-height: 1.1;
+  color: var(--text);
+  letter-spacing: -0.02em;
 }
 
 .placement-popup-description {
@@ -146,20 +161,30 @@
   padding: 15px 34px;
   border: none;
   border-radius: 999px;
-  background: var(--grad-primary);
-  color: #fff;
+  background: var(--accent);
+  color: var(--primary-dark);
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.01em;
   cursor: pointer;
   transition: var(--transition);
   display: block;
-  margin: 0;
+  margin: 8px 0 32px;
+  box-shadow: 0 8px 16px rgba(6, 182, 212, 0.25);
 }
 
 .placement-popup-button:hover {
-  box-shadow: var(--shadow-hover);
-  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(6, 182, 212, 0.35);
+  transform: translateY(-2px);
+}
+
+.placement-popup-footer-band {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 16px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .placement-popup-note {

@@ -123,12 +123,25 @@
   gap: 10px;
 }
 .course-tile-actions .outline-btn {
-  padding: 10px 16px;
+  width: 140px;
+  height: 42px;
+  padding: 0;
+  margin-top: 0;
   font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
 }
 .course-tile-actions .primary-btn {
-  padding: 10px 20px;
+  width: 140px;
+  height: 42px;
+  padding: 0;
   font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
 }
 
 /* ---- Course Detail Page (routed /courses/:slug) ---- */

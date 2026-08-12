@@ -16,7 +16,6 @@ const Hero = () => {
       <section className="hero2">
         <div className="hero2-glow hero2-glow-1" />
         <div className="hero2-glow hero2-glow-2" />
-        <div className="hero2-grid" />
 
         <div className="container hero2-inner">
           <div className="hero2-content">
@@ -35,38 +34,6 @@ const Hero = () => {
               >
                 Speak to an Advisor
               </button>
-            </div>
-          </div>
-
-          <div className="hero2-illustration">
-            <div className="hero2-code-card">
-              <div className="hero2-code-dots">
-                <span className="dot red" />
-                <span className="dot yellow" />
-                <span className="dot green" />
-              </div>
-              <div className="hero2-code-lines">
-                <p><span className="tok-kw">const</span> <span className="tok-var">developer</span> = <span className="tok-kw">new</span> <span className="tok-fn">Career</span>();</p>
-                <p><span className="tok-var">developer</span>.<span className="tok-fn">learn</span>([<span className="tok-str">'React'</span>, <span className="tok-str">'Node'</span>, <span className="tok-str">'AI'</span>]);</p>
-                <p><span className="tok-kw">await</span> <span className="tok-var">developer</span>.<span className="tok-fn">launch</span>();</p>
-              </div>
-            </div>
-
-            <div className="hero2-skill-card">
-              <div className="hero2-skill-top">
-                <div className="hero2-skill-icon"><i className="fa-solid fa-arrow-trend-up"></i></div>
-                <div>
-                  <div className="hero2-skill-title">Skill Progression</div>
-                  <div className="hero2-skill-sub">Advanced Level Reached</div>
-                </div>
-              </div>
-              <div className="hero2-skill-bar">
-                <div className="hero2-skill-bar-fill" />
-              </div>
-            </div>
-
-            <div className="hero2-orbit">
-              <i className="fa-solid fa-code"></i>
             </div>
           </div>
         </div>

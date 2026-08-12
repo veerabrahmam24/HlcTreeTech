@@ -23,7 +23,6 @@ const CoursesCard = () => {
               <div className='course-tile shadow' key={val.coursesName}>
                 <div className='course-tile-media'>
                   <div className='course-tile-icon'><i className={val.icon}></i></div>
-                  <span className='course-price-badge'>{val.priceAll}</span>
                 </div>
                 <div className='course-tile-body'>
                   <h3>{val.coursesName}</h3>
@@ -37,7 +36,6 @@ const CoursesCard = () => {
                     ))}
                   </div>
                   <div className='course-tile-footer'>
-                    <span className='course-per'>{val.pricePer}</span>
                     <div className='course-tile-actions'>
                       <Link to={`/courses/${toSlug(val.coursesName)}`} className='outline-btn'>View course</Link>
                       <button className='primary-btn' onClick={() => setPopupOpen(true)}>Enroll Now</button>
