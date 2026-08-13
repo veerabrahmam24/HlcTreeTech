@@ -120,7 +120,9 @@
 .course-tile-actions {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
+  width: 100%;
 }
 .course-tile-actions .outline-btn {
   width: 140px;

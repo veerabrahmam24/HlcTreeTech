@@ -147,7 +147,7 @@ const Project = () => {
 
   return (
     <>
-      <Back title='Student Projects' />
+      <Back title={<>We Help You Build Projects That Get's You <span className='back-highlight'>Hired</span></>} />
       <section className='project'>
         <div className='container project__content'>
           <div className='project__hero'>

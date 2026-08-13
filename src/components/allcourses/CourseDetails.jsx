@@ -218,7 +218,7 @@ const normalize = (name) => name?.trim().toLowerCase()
 const CourseDetails = () => {
   const { courseSlug } = useParams()
   const course = coursesCard.find(
-    (item) => item.coursesName.toLowerCase().replace(/\s+/g, "-") === courseSlug
+    (item) => item.coursesName.trim().toLowerCase().replace(/\s+/g, "-") === courseSlug
   )
   const details = course ? courseDetailData[normalize(course.coursesName)] : null
 

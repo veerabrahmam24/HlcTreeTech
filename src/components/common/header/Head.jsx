@@ -47,13 +47,17 @@
 
 
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import "./headNew.css";
 
 const HeadNew = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
   const isProjectPage = location.pathname === "/project";
   const scrollText = isProjectPage ? (
     <>
