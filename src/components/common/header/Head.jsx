@@ -173,10 +173,6 @@ const HeadNew = () => {
       </header>
 
       {/* MARQUEE SCROLL BAR */}
-      <div className="hn-scroll">
-        <div className="hn-scroll-content">
-          HLC Tree Technologies: Admissions Now Open for Our Career-Focused Programs. 
-          New Batch Starts on the 22nd Aug. Enroll Today and Contact Support for Assistance.
       <div className={`hn-scroll${isProjectPage ? " project-scroll" : ""}`}>
         <div className={`hn-scroll-content${isProjectPage ? " project-scroll-content" : ""}`}>
           {scrollText}
