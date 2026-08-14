@@ -1,8 +1,20 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import "./PlacementPopup.css"
+import { coursesCard } from "../../dummydata"
+
+const courseNames = coursesCard.map((c) => c.coursesName.trim())
 
 const PlacementPopup = ({ onClose }) => {
   const youtubeUrl = "https://www.youtube.com/@hlctechsolutions?si=ESsaKrf7-TpW9pfE"
+  const [activeIndex, setActiveIndex] = useState(0)
+
+  useEffect(() => {
+    if (courseNames.length <= 1) return
+    const timer = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % courseNames.length)
+    }, 1500)
+    return () => clearInterval(timer)
+  }, [])
 
   const openYoutubeLink = (event) => {
     event?.stopPropagation()
@@ -42,7 +54,19 @@ const PlacementPopup = ({ onClose }) => {
               <span className="placement-popup-brand-name">Tree Technologies</span>
             </div>
             <p className="placement-popup-topline">Placement Assistance Program On</p>
-            <h1 className="placement-popup-title">React &amp; DevOps</h1>
+            <h1 className="placement-popup-title" aria-live="off">
+              <span key={activeIndex} className="placement-popup-title-word">
+                {courseNames[activeIndex]}
+              </span>
+            </h1>
+            <div className="placement-popup-dots" aria-hidden="true">
+              {courseNames.map((name, i) => (
+                <span
+                  key={name + i}
+                  className={`placement-popup-dot ${i === activeIndex ? "placement-popup-dot-active" : ""}`}
+                />
+              ))}
+            </div>
             <p className="placement-popup-description">
               Gain real-world skills, practical training, and placement support with HLC Tree Technologies.
             </p>

@@ -4,10 +4,10 @@ import Awrapper from "../about/Awrapper"
 import Hero from "./hero/Hero"
 import HomeCourses from "./HomeCourses"
 
-const Home = () => {
+const Home = ({ placementPopupOpen }) => {
   return (
     <>
-      <Hero />
+      <Hero placementPopupOpen={placementPopupOpen} />
       <Awrapper />
       <AboutCard />
       <HomeCourses />

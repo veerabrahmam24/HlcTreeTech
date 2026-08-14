@@ -481,8 +481,3 @@ p {
   #heading h1 { font-size: clamp(20px, 7vw, 26px); }
 }
 
-/* =================== MAIN CONTENT OFFSET =================== */
-.main-content { margin-top: 0px; }
-
-@media (max-width: 768px) { .main-content { margin-top: 100px; } }
-@media (max-width: 480px) { .main-content { margin-top: 88px; } }

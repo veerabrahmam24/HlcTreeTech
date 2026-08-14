@@ -16,7 +16,6 @@ const HomeCourses = () => {
             <div className='course-tile shadow' key={val.coursesName}>
               <div className='course-tile-media'>
                 <div className='course-tile-icon'><i className={val.icon}></i></div>
-                <span className='course-price-badge'>{val.priceAll}</span>
               </div>
               <div className='course-tile-body'>
                 <h3>{val.coursesName}</h3>
@@ -30,7 +29,6 @@ const HomeCourses = () => {
                   ))}
                 </div>
                 <div className='course-tile-footer'>
-                  <span className='course-per'>{val.pricePer}</span>
                   <Link to='/courses' className='primary-btn'>View Course</Link>
                 </div>
               </div>

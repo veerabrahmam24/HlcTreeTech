@@ -125,7 +125,7 @@ const HeadNew = () => {
                  Project
                </a>
              </li>
-             <li>
+             {/* <li>
                <a href="/works" className="nav-link">
                  Works
               </a>
@@ -139,11 +139,11 @@ const HeadNew = () => {
                 <li><a href="/partnership-model" className="nav-link">Partnership Model</a></li>
                 <li><a href="/talent-pool" className="nav-link">Talent Pool</a></li>
               </ul>
-             </li>
+             </li> */}
              <li>
-               <a href="/contact" className="nav-link">
+               {/* <a href="/contact" className="nav-link">
                  Contact
-              </a>
+              </a> */}
              </li>
             </ul>
           </nav>

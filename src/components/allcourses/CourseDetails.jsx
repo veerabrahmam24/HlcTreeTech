@@ -73,7 +73,7 @@ const courseDetailData = {
     startDate: "Next Batch: Aug 12",
     seatsLeft: 15,
     instructor: {
-      name: "Kavitha Reddy",
+      name: "Sai",
       title: "Frontend Specialist",
       bio: "8+ years in web design and frontend development.",
       image: "./images/back.webp"
@@ -95,7 +95,7 @@ const courseDetailData = {
     startDate: "Next Batch: Aug 20",
     seatsLeft: 6,
     instructor: {
-      name: "Vikram Deshmukh",
+      name: "Nandhu",
       title: "Full-Stack Developer",
       bio: "9+ years in backend development and API design.",
       image: "./images/back.webp"
@@ -139,7 +139,7 @@ const courseDetailData = {
     startDate: "Next Batch: Aug 25",
     seatsLeft: 3,
     instructor: {
-      name: "Rajesh Venkataraman",
+      name: "Veera",
       title: "AI & ML Specialist",
       bio: "15+ years in machine learning, deep learning, and AI architecture.",
       image: "./images/back.webp"
@@ -306,14 +306,6 @@ const CourseDetails = () => {
                   <h3>Course Pricing</h3>
                 </div>
                 <div className='pricingBody'>
-                  <div className='priceItem'>
-                    <span className='priceLabel'>Full Course</span>
-                    <span className='priceValue'>{details?.priceAll || course.priceAll}</span>
-                  </div>
-                  <div className='priceItem'>
-                    <span className='priceLabel'>Per Month</span>
-                    <span className='priceValue'>{details?.pricePer || course.pricePer}</span>
-                  </div>
                   {details?.seatsLeft && (
                     <div className='seatsAlert'>
                       <i className='fa fa-info-circle'></i>

@@ -59,9 +59,11 @@
   position: absolute;
   top: 20px;
   right: 20px;
+  box-sizing: border-box;
   width: 44px;
   height: 44px;
-  border: none;
+  padding: 0;
+  border: 1px solid var(--border);
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.95);
   color: var(--text);
@@ -71,6 +73,7 @@
   display: grid;
   place-items: center;
   z-index: 2;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.15);
 }
 
 .placement-popup-close:hover {
@@ -146,6 +149,42 @@
   line-height: 1.1;
   color: var(--text);
   letter-spacing: -0.02em;
+}
+
+.placement-popup-title-word {
+  display: inline-block;
+  animation: placementTitleFade 0.5s ease;
+}
+
+@keyframes placementTitleFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.placement-popup-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.placement-popup-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--border);
+  transition: var(--transition);
+}
+
+.placement-popup-dot-active {
+  width: 20px;
+  border-radius: 4px;
+  background: var(--accent);
 }
 
 .placement-popup-description {

@@ -30,7 +30,7 @@ function App() {
           <Route exact path='/' render={() => (
             <>
               {showPlacementPopup && <PlacementPopup onClose={() => setShowPlacementPopup(false)} />}
-              <Home />
+              <Home placementPopupOpen={showPlacementPopup} />
             </>
           )} />
           <Route exact path='/about' component={About} />

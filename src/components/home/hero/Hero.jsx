@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Hero.css";
 import Popup from "../popup";
 
-const Hero = () => {
-  const [popupOpen, setPopupOpen] = useState(true);
+const Hero = ({ placementPopupOpen }) => {
+  const [popupOpen, setPopupOpen] = useState(false);
+
+  // Wait for the placement popup to close before showing the advisor popup,
+  // so the two never overlap on screen (especially on mobile).
+  useEffect(() => {
+    if (!placementPopupOpen) {
+      setPopupOpen(true);
+    }
+  }, [placementPopupOpen]);
 
   function handlePopupSubmit(formData) {
     console.log("Form submitted from popup:", formData);

@@ -48,7 +48,7 @@ export const coursesCard = [
     courTeacher: [
       {
         dcover: "./images/stitch/courses-instructor-1.jpg",
-        name: "by Arjun Sharma",
+        name: "by Sai",
         totalTime: "50 lectures (190 hrs)",
       },
     ],
@@ -62,7 +62,7 @@ export const coursesCard = [
     courTeacher: [
       {
         dcover: "./images/stitch/courses-instructor-2.jpg",
-        name: "by Priya Iyer",
+        name: "by Pooja",
         totalTime: "30 lectures (125 hrs)",
       },
     ],
@@ -76,7 +76,7 @@ export const coursesCard = [
     courTeacher: [
       {
         dcover: "./images/stitch/courses-instructor-3.jpg",
-        name: "by Kavitha Reddy",
+        name: "by Sai",
         totalTime: "50 lectures (50 hrs)",
       },
     ],
@@ -90,7 +90,7 @@ export const coursesCard = [
     courTeacher: [
       {
         dcover: null,
-        name: "by Vikram Deshmukh",
+        name: "by Nandhu",
         totalTime: "20 lectures (20 hrs)",
       },
     ],
@@ -104,7 +104,7 @@ export const coursesCard = [
     courTeacher: [
       {
         dcover: null,
-        name: "by Sneha Kulkarni",
+        name: "by Sai",
         totalTime: "100 lectures (150 hrs)",
       },
     ],
@@ -118,7 +118,7 @@ export const coursesCard = [
     courTeacher: [
       {
         dcover: null,
-        name: "by Rajesh Venkataraman",
+        name: "by Veera",
         totalTime: "200 lectures (300 hrs)",
       },
     ],
