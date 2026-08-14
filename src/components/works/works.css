@@ -1,0 +1,134 @@
+/* =====================================================
+   WORKS / SUCCESS STORIES — Kinetic Enterprise Education
+   ===================================================== */
+
+.worksGrid-section {
+  padding: 40px 0 90px;
+  background: var(--bg);
+}
+
+/* Featured card */
+.work-featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 24px;
+  transition: var(--transition);
+}
+.work-featured:hover { box-shadow: var(--shadow-hover); }
+.work-featured-media { position: relative; min-height: 280px; }
+.work-featured-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.work-tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: var(--primary-pale);
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+.work-featured-body {
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.work-meta {
+  display: flex;
+  gap: 16px;
+  color: var(--text-dim);
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+.work-meta span { display: flex; align-items: center; gap: 6px; }
+.work-featured-body h2 {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+.work-featured-body p {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+.work-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* Grid of secondary cards */
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.work-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+.work-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+.work-card-media { position: relative; height: 170px; }
+.work-card-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.work-card-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--grad-primary);
+  color: #fff;
+  font-size: 40px;
+}
+.work-card-body { padding: 22px; display: flex; flex-direction: column; flex: 1; }
+.work-card-body h3 {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.work-card-body p {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 14px;
+  flex: 1;
+}
+
+/* ---- Responsive ---- */
+@media screen and (max-width: 992px) {
+  .work-featured { grid-template-columns: 1fr; }
+  .work-featured-media { height: 240px; }
+  .works-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media screen and (max-width: 576px) {
+  .worksGrid-section { padding: 30px 0 60px; }
+  .work-featured-body { padding: 24px; }
+  .works-grid { grid-template-columns: 1fr; }
+}

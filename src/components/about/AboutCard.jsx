@@ -1,39 +1,29 @@
 import React from "react"
-import Heading from "../common/heading/Heading"
 import "./about.css"
 import { homeAbout } from "../../dummydata"
-import Awrapper from "./Awrapper"
 
 const AboutCard = () => {
   return (
-    <>
-      <section className='aboutHome'>
-        <div className='container flexSB'>
-          <div className='left row'>
-            <img src='./images/about.webp' alt='' />
-          </div>
-          <div className='right row'>
-            <Heading subtitle='LEARN ANYTHING' title='Benefits About Online Learning Expertise' />
-            <div className='items'>
-              {homeAbout.map((val) => {
-                return (
-                  <div className='item flexSB'>
-                    <div className='img'>
-                      <img src={val.cover} alt='' />
-                    </div>
-                    <div className='text'>
-                      <h2>{val.title}</h2>
-                      <p>{val.desc}</p>
-                    </div>
-                  </div>
-                )
-              })}
-            </div>
-          </div>
+    <section className='benefits2'>
+      <div className='container'>
+        <div className='benefits2-intro'>
+          <span className='benefits2-eyebrow'>Learn Anything</span>
+          <h2>Benefits About Online Learning Expertise</h2>
         </div>
-      </section>
-      <Awrapper />
-    </>
+        <div className='benefits2-grid'>
+          {homeAbout.map((val) => (
+            <div className='benefits2-card' key={val.title}>
+              <div className='benefits2-blob' />
+              <div className='benefits2-icon'>
+                <i className={val.icon}></i>
+              </div>
+              <h4>{val.title}</h4>
+              <p>{val.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   )
 }
 

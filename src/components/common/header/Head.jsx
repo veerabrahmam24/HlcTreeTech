@@ -47,13 +47,17 @@
 
 
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import "./headNew.css";
 
 const HeadNew = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
   const isProjectPage = location.pathname === "/project";
   const scrollText = isProjectPage ? (
     <>
@@ -121,9 +125,26 @@ const HeadNew = () => {
                  Project
                </a>
              </li>
-              {/* <li><a href="#about">About</a></li>
-              <li><a href="#courses">All Courses</a></li>
-              <li><a href="#contact">Contact</a></li> */}
+             {/* <li>
+               <a href="/works" className="nav-link">
+                 Works
+              </a>
+             </li>
+             <li className="hn-has-dropdown">
+               <a href="/partnership" className="nav-link">
+                 Partnership <i className="fa-solid fa-chevron-down hn-caret"></i>
+              </a>
+              <ul className="hn-dropdown">
+                <li><a href="/partnership" className="nav-link">Partnership Overview</a></li>
+                <li><a href="/partnership-model" className="nav-link">Partnership Model</a></li>
+                <li><a href="/talent-pool" className="nav-link">Talent Pool</a></li>
+              </ul>
+             </li> */}
+             <li>
+               {/* <a href="/contact" className="nav-link">
+                 Contact
+              </a> */}
+             </li>
             </ul>
           </nav>
 
@@ -153,6 +174,12 @@ const HeadNew = () => {
                 <li><a href="/courses" className="nav-link" onClick={() => setOpen(false)}>All Courses</a></li>
                 <li><a href="/about" className="nav-link" onClick={() => setOpen(false)}>About</a></li>
                 <li><a href="/project" className="nav-link" onClick={() => setOpen(false)}>Project</a></li>
+                <li><a href="/works" className="nav-link" onClick={() => setOpen(false)}>Works</a></li>
+                <li className="hn-mobile-group-label">Partnership</li>
+                <li><a href="/partnership" className="nav-link hn-mobile-sublink" onClick={() => setOpen(false)}>Partnership Overview</a></li>
+                <li><a href="/partnership-model" className="nav-link hn-mobile-sublink" onClick={() => setOpen(false)}>Partnership Model</a></li>
+                <li><a href="/talent-pool" className="nav-link hn-mobile-sublink" onClick={() => setOpen(false)}>Talent Pool</a></li>
+                <li><a href="/contact" className="nav-link" onClick={() => setOpen(false)}>Contact</a></li>
               </ul>
             </div>
 

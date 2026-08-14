@@ -1,0 +1,241 @@
+/* =====================================================
+   PARTNERSHIP LANDING + MODEL — Kinetic Enterprise Education
+   ===================================================== */
+
+/* ---- Hero CTA row (below Back banner, Partnership landing) ---- */
+.partnerHero-actions-section {
+  padding: 36px 0 10px;
+  background: var(--bg);
+}
+.partnerHero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ---- Benefits 3-col ---- */
+.partnerBenefits {
+  background: var(--bg-alt);
+  padding: 70px 0;
+}
+.partnerBenefits h2 {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 10px;
+}
+.partnerBenefits > .container > p {
+  text-align: center;
+  color: var(--text-muted);
+  max-width: 620px;
+  margin: 0 auto 40px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+.partnerBenefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.partnerBenefit-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  transition: var(--transition);
+}
+.partnerBenefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+.partnerBenefit-card .icon-tile {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius);
+  background: var(--primary-pale);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+.partnerBenefit-card h4 {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.partnerBenefit-card p {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* ---- Process Steps (Partnership Model) ---- */
+.partnerSteps {
+  padding: 20px 0 70px;
+  background: var(--bg);
+}
+.partnerSteps-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.partnerStep {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  transition: var(--transition);
+}
+.partnerStep:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+.partnerStep.is-final {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+.partnerStep.is-final h3,
+.partnerStep.is-final p {
+  color: #fff;
+}
+.partnerStep-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.partnerStep-num {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+.partnerStep.is-final .partnerStep-num {
+  background: #fff;
+  color: var(--primary);
+}
+.partnerStep-top i {
+  font-size: 24px;
+  color: var(--text-dim);
+}
+.partnerStep.is-final .partnerStep-top i { color: rgba(255,255,255,0.8); }
+.partnerStep h3 {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.partnerStep p {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* ---- Commitment (glass) section ---- */
+.partnerCommit {
+  padding: 20px 0 90px;
+  background: var(--bg);
+}
+.partnerCommit-panel {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  padding: 48px;
+}
+.partnerCommit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.partnerCommit-eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--primary-pale);
+  padding: 5px 14px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+.partnerCommit-text h2 {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 14px;
+}
+.partnerCommit-text p {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.75;
+  margin-bottom: 22px;
+}
+.partnerGlass-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.partnerGlass-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.partnerGlass-card i {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--primary-pale);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.partnerGlass-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.partnerGlass-card p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ---- Responsive ---- */
+@media screen and (max-width: 992px) {
+  .partnerCommit-grid { grid-template-columns: 1fr; gap: 32px; }
+  .partnerBenefits-grid,
+  .partnerSteps-grid { grid-template-columns: 1fr; }
+}
+
+@media screen and (max-width: 576px) {
+  .partnerHero-actions-section { padding: 26px 0 4px; }
+  .partnerBenefits { padding: 46px 0; }
+  .partnerCommit-panel { padding: 26px; }
+}

@@ -59,19 +59,19 @@
   border-radius: 999px;
   border: 1px solid rgba(37, 99, 235, 0.25);
   background: #eff6ff;
-  color: #2563eb;
+  color: #06b6d4;
 }
 
 .lp-heading {
   margin-top: 16px;
   font-size: 32px;
   font-weight: 700;
-  font-family: 'Poppins', sans-serif;
-  color: #1e293b;
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #0f172a;
 }
 
 .lp-heading span {
-  background: linear-gradient(120deg, #2563eb, #3b82f6);
+  background: linear-gradient(120deg, #06b6d4, #22d3ee);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -81,7 +81,7 @@
   margin: 12px auto 0;
   max-width: 620px;
   font-size: 15px;
-  color: #64748b;
+  color: #45464d;
 }
 
 /* code mode: already dark, just ensure text is light */
@@ -190,13 +190,13 @@
   height: 42px;
   border-radius: 999px;
   background: #ffffff;
-  border: 2px solid #2563eb;
+  border: 2px solid #06b6d4;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-family: 'Poppins', sans-serif;
-  color: #2563eb;
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #06b6d4;
   box-shadow: 0 0 0 4px rgba(37,99,235,0.12), 0 4px 16px rgba(37,99,235,0.2);
 }
 
@@ -290,18 +290,18 @@
   font-size: 16px;
   font-weight: 600;
   color: #e2e8f0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Hanken Grotesk', sans-serif;
 }
 
 .lp-card-sub {
   font-size: 13px;
-  color: #2563eb;
+  color: #06b6d4;
   margin-top: 2px;
 }
 
 .lp-card-desc {
   font-size: 14px;
-  color: #64748b;
+  color: #45464d;
   margin-bottom: 10px;
   line-height: 1.6;
 }
@@ -314,7 +314,7 @@
   padding: 5px 10px;
   border-radius: 999px;
   background: rgba(59, 130, 246, 0.06);
-  color: #1d4ed8;
+  color: #0f172a;
 }
 
 .lp-chip-cta {
@@ -332,7 +332,7 @@
 
 .lp-summary span {
   font-weight: 600;
-  color: #2563eb;
+  color: #06b6d4;
 }
 
 /* simple animations */
@@ -468,7 +468,7 @@
 /* ===== STEP 1 – FOUNDATION UNIVERSE ===== */
 
 .lp-foundation-universe {
-  background: radial-gradient(circle at top, #1d4ed8, #020617);
+  background: radial-gradient(circle at top, #0f172a, #020617);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -665,7 +665,7 @@
 /* ===== STEP 3 – PROJECT GALAXY ===== */
 
 .lp-project-universe {
-  background: radial-gradient(circle at top, #4f46e5, #1e293b);
+  background: radial-gradient(circle at top, #4f46e5, #0f172a);
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.2fr);
@@ -747,7 +747,7 @@
   background: #22c55e;
 }
 .confetti-piece:nth-child(3n) {
-  background: #3b82f6;
+  background: #22d3ee;
 }
 .confetti-piece:nth-child(5n) {
   background: #e11d48;
@@ -867,7 +867,7 @@
 }
 
 .lp-offer-top .company {
-  color: #2563eb;
+  color: #06b6d4;
 }
 
 .lp-offer-big p {

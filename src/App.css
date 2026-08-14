@@ -1,50 +1,51 @@
 /* =====================================================
    HLC TREE TECH — Design System
-   Theme: Clean White | Royal Blue
+   Theme: Kinetic Enterprise Education (Slate Navy | Cyan)
+   Source: Stitch project "Skill-to-Hire Startup Partnership"
    ===================================================== */
 
 :root {
   /* --- Backgrounds --- */
-  --bg: #ffffff;
-  --bg-alt: #f8faff;
+  --bg: #f7f9fb;
+  --bg-alt: #f2f4f6;
   --bg-card: #ffffff;
 
   /* --- Brand Colors --- */
-  --primary: #2563eb;
-  --primary-light: #3b82f6;
-  --primary-pale: #dbeafe;
-  --primary-dark: #1d4ed8;
-  --accent: #f59e0b;
+  --primary: #0f172a;
+  --primary-light: #334155;
+  --primary-pale: #e2e8f0;
+  --primary-dark: #020617;
+  --accent: #06b6d4;
 
   /* --- Text --- */
-  --text: #1e293b;
-  --text-muted: #64748b;
-  --text-dim: #94a3b8;
+  --text: #0f172a;
+  --text-muted: #45464d;
+  --text-dim: #76777d;
 
   /* --- Borders --- */
-  --border: #e2e8f0;
-  --border-accent: rgba(37, 99, 235, 0.3);
+  --border: #e0e3e5;
+  --border-accent: rgba(6, 182, 212, 0.35);
 
   /* --- Shadows --- */
-  --shadow-sm: 0 1px 8px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 24px rgba(37, 99, 235, 0.09);
-  --shadow-lg: 0 8px 40px rgba(37, 99, 235, 0.14);
-  --shadow-hover: 0 12px 40px rgba(37, 99, 235, 0.18);
+  --shadow-sm: 0 1px 8px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.10);
+  --shadow-lg: 0 8px 40px rgba(15, 23, 42, 0.14);
+  --shadow-hover: 0 12px 40px rgba(15, 23, 42, 0.18);
 
   /* --- Gradients --- */
-  --grad-primary: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
-  --grad-text: linear-gradient(120deg, #2563eb 0%, #3b82f6 100%);
+  --grad-primary: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+  --grad-text: linear-gradient(120deg, #0f172a 0%, #06b6d4 100%);
 
   /* --- Shape & Motion --- */
-  --radius-sm: 8px;
-  --radius: 14px;
-  --radius-lg: 22px;
+  --radius-sm: 4px;
+  --radius: 8px;
+  --radius-lg: 12px;
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
   --transition: 0.28s var(--ease);
 
   /* --- Layout --- */
-  --max-width: 1200px;
-  --gutter: 20px;
+  --max-width: 1280px;
+  --gutter: 24px;
 }
 
 /* ===================== RESET ===================== */
@@ -121,17 +122,17 @@ li { list-style: none; }
   text-align: center;
   background: var(--primary-pale);
   color: var(--primary);
-  border: 1px solid rgba(37, 99, 235, 0.2);
+  border: 1px solid rgba(15, 23, 42, 0.15);
   transition: var(--transition);
   cursor: pointer;
   font-size: 15px;
 }
 .icon:hover {
-  background: var(--primary);
+  background: var(--accent);
   color: #fff;
   border-color: transparent;
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+  box-shadow: 0 6px 20px rgba(6, 182, 212, 0.35);
 }
 
 /* =================== BUTTONS =================== */
@@ -149,21 +150,42 @@ button {
 button i { margin-left: 8px; }
 
 .primary-btn {
+  display: inline-block;
+  padding: 13px 28px;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
   background: var(--grad-primary);
   color: #fff;
-  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.35);
 }
 .primary-btn:hover {
   background: var(--primary);
   color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(37, 99, 235, 0.45);
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.45);
 }
 
 .outline-btn {
+  display: inline-block;
+  padding: 13px 28px;
+  border-radius: var(--radius-sm);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
   background: transparent;
   color: var(--primary);
-  border: 1.5px solid rgba(37, 99, 235, 0.5);
+  border: 1.5px solid rgba(15, 23, 42, 0.5);
   width: 100%;
   margin-top: 18px;
 }
@@ -172,7 +194,7 @@ button i { margin-left: 8px; }
   color: #fff;
   border-color: transparent;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.35);
 }
 
 .secondary-btn {
@@ -205,15 +227,15 @@ button i { margin-left: 8px; }
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--primary);
+  color: var(--accent);
   background: var(--primary-pale);
-  border: 1px solid rgba(37, 99, 235, 0.2);
+  border: 1px solid rgba(15, 23, 42, 0.2);
   padding: 5px 16px;
   border-radius: 999px;
   margin-bottom: 14px;
 }
 #heading h1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Hanken Grotesk', sans-serif;
   font-size: clamp(26px, 3.5vw, 44px);
   font-weight: 700;
   line-height: 1.2;
@@ -230,7 +252,7 @@ p {
 
 /* =================== BACK / PAGE HERO =================== */
 .back {
-  background-image: url("../public/images/back.webp");
+  background-image: url("../public/images/stitch/partnership-landing-hero.jpg");
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -243,19 +265,41 @@ p {
   text-align: center;
 }
 .back.back--plain {
-  background: none;
-  background-image: none;
-  position: relative;
-  z-index: 0;
-  height: auto;
-  padding-top: 40px;
-}
-.back.back--plain::before {
-  content: none;
+  background-image: url("./components/project/Gemini_Generated_Image_tshanjtshanjtsha.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
 }
 .back.back--plain h1 {
-  color: #111827;
-  text-shadow: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  text-align: center;
+  width: 100%;
+  color: #ffffff;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+.back.back--plain + .margin {
+  margin-top: 62vh;
+}
+
+@media screen and (max-width: 768px) {
+  .back.back--plain h1 {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    padding: 0 16px;
+  }
+  .back.back--plain + .margin { margin-top: 44vh; }
 }
 /* Courses page: allow background to scroll while keeping the title centered */
 .back.back--courses {
@@ -331,19 +375,31 @@ p {
   inset: 0;
   background: linear-gradient(180deg,
     rgba(15, 23, 42, 0.80) 0%,
-    rgba(37, 99, 235, 0.65) 60%,
+    rgba(6, 182, 212, 0.55) 60%,
     rgba(15, 23, 42, 0.85) 100%);
   z-index: 0;
 }
 .back h1 {
   position: relative;
   z-index: 1;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Hanken Grotesk', sans-serif;
   font-size: clamp(36px, 8vw, 76px);
   font-weight: 800;
   color: #ffffff;
   line-height: 1.1;
   text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+.back-highlight {
+  display: inline-block;
+  color: #ffffff;
+  animation: back-highlight-pulse 2.2s ease-in-out infinite;
+}
+@keyframes back-highlight-pulse {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 0 rgba(251, 191, 36, 0)); }
+  50% { transform: scale(1.06); filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.6)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .back-highlight { animation: none; }
 }
 .back h2 {
   position: relative;
@@ -354,6 +410,16 @@ p {
   text-transform: uppercase;
   letter-spacing: 3px;
   margin-top: 10px;
+}
+.back-desc {
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  max-width: 560px;
+  margin: 14px auto 0 !important;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85) !important;
 }
 
 /* =================== MARGIN SPACER =================== */
@@ -415,8 +481,3 @@ p {
   #heading h1 { font-size: clamp(20px, 7vw, 26px); }
 }
 
-/* =================== MAIN CONTENT OFFSET =================== */
-.main-content { margin-top: 0px; }
-
-@media (max-width: 768px) { .main-content { margin-top: 100px; } }
-@media (max-width: 480px) { .main-content { margin-top: 88px; } }

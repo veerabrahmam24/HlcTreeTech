@@ -10,6 +10,10 @@ import Team from "./components/team/Team"
 import Pricing from "./components/pricing/Pricing"
 import Blog from "./components/blog/Blog"
 import Contact from "./components/contact/Contact"
+import Works from "./components/works/Works"
+import Partnership from "./components/partnership/Partnership"
+import PartnershipModel from "./components/partnership/PartnershipModel"
+import TalentPool from "./components/talentpool/TalentPool"
 import Footer from "./components/common/footer/Footer"
 import Home from "./components/home/Home"
 import PlacementPopup from "./components/home/PlacementPopup"
@@ -26,7 +30,7 @@ function App() {
           <Route exact path='/' render={() => (
             <>
               {showPlacementPopup && <PlacementPopup onClose={() => setShowPlacementPopup(false)} />}
-              <Home />
+              <Home placementPopupOpen={showPlacementPopup} />
             </>
           )} />
           <Route exact path='/about' component={About} />
@@ -37,6 +41,10 @@ function App() {
           <Route exact path='/pricing' component={Pricing} />
           <Route exact path='/journal' component={Blog} />
           <Route exact path='/contact' component={Contact} />
+          <Route exact path='/works' component={Works} />
+          <Route exact path='/partnership' component={Partnership} />
+          <Route exact path='/partnership-model' component={PartnershipModel} />
+          <Route exact path='/talent-pool' component={TalentPool} />
         </Switch>
         </div>
         <Footer />

@@ -1,210 +1,171 @@
 /* =====================================================
-   ABOUT SECTION — White/Blue Theme
+   ABOUT SECTION — Kinetic Enterprise Education (Slate Navy | Cyan)
    ===================================================== */
 
-/* ---- About Home (side-by-side layout) ---- */
-.aboutHome {
-  background: #f8faff;
-  padding: 0px;
+/* ---- Benefits (centered intro + 3-col card grid) ---- */
+.benefits2 {
+  background: var(--bg);
+  padding: 100px 0;
   position: relative;
   overflow: hidden;
 }
-
-.aboutHome #heading {
-  text-align: left;
-  padding: 0 0 28px;
-}
-
-.aboutHome .left img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 12px 40px rgba(37, 99, 235, 0.12);
-  border: 1px solid #e2e8f0;
-}
-
-.aboutHome .right {
-  padding: 60px 50px;
-  position: relative;
-  z-index: 1;
-}
-
-.aboutHome .items {
-  margin-top: 36px;
+.benefits2-intro {
+  max-width: 620px;
+  margin: 0 auto 56px;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  align-items: center;
+  gap: 12px;
 }
-
-.aboutHome .item {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 14px;
-  padding: 20px 22px;
-  display: flex;
-  gap: 18px;
-  align-items: flex-start;
-  transition: all 0.3s ease;
+.benefits2-eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--primary-pale);
+  border: 1px solid var(--border-accent);
+  padding: 6px 16px;
+  border-radius: 999px;
+}
+.benefits2-intro h2 {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: clamp(26px, 3.2vw, 38px);
+  font-weight: 700;
+  color: var(--text);
+}
+.benefits2-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.benefits2-card {
   position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
   overflow: hidden;
-  box-shadow: 0 2px 12px rgba(37, 99, 235, 0.06);
+  transition: var(--transition);
 }
-.aboutHome .item::before {
-  content: '';
+.benefits2-card:hover {
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-hover);
+}
+.benefits2-blob {
   position: absolute;
-  left: 0; top: 0; bottom: 0;
-  width: 3px;
-  background: linear-gradient(180deg, #2563eb, #3b82f6);
-  border-radius: 3px 0 0 3px;
-  opacity: 0;
-  transition: 0.3s ease;
+  top: 0;
+  right: 0;
+  width: 110px;
+  height: 110px;
+  background: var(--primary-pale);
+  border-radius: 0 0 0 100%;
+  z-index: 0;
+  transition: transform 0.3s ease;
 }
-.aboutHome .item:hover {
-  border-color: rgba(37, 99, 235, 0.3);
-  transform: translateX(6px);
-  box-shadow: 0 8px 28px rgba(37, 99, 235, 0.12);
+.benefits2-card:hover .benefits2-blob {
+  transform: scale(1.15);
 }
-.aboutHome .item:hover::before {
-  opacity: 1;
-}
-
-.aboutHome .img {
-  width: 60px;
-  height: 60px;
-  flex-shrink: 0;
-  border-radius: 12px;
-  padding: 10px;
-  background: linear-gradient(135deg, #1d4ed8, #2563eb);
-  border: 1px solid rgba(37, 99, 235, 0.3);
+.benefits2-icon {
+  position: relative;
+  z-index: 1;
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+  font-size: 24px;
+  margin-bottom: 22px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
 }
-.aboutHome .img img {
-  width: 36px;
-  height: 36px;
-  object-fit: contain;
-  filter: brightness(0) invert(1);
+.benefits2-card:hover .benefits2-icon {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
 }
-
-.aboutHome .text {}
-.aboutHome .item h2 {
-  font-size: 17px;
-  font-weight: 600;
-  color: #1e293b;
-  margin-bottom: 6px;
-  font-family: 'Poppins', sans-serif;
-}
-.aboutHome .item p {
-  color: #64748b;
-  font-size: 14px;
-  line-height: 1.6;
-  margin: 0;
-}
-.aboutHome .item:hover p {
-  color: #475569;
-}
-
-/* ---- Awrapper Stats (with awrapper.webp + blue overlay) ---- */
-.awrapper {
-  background-image: url("../../../public/images/awrapper.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: scroll;
-  position: relative;
-  padding: 70px 0;
-}
-.awrapper::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(37, 99, 235, 0.88) 0%,
-    rgba(15, 23, 42, 0.90) 100%
-  );
-}
-
-.awrapper .container {
+.benefits2-card h4 {
   position: relative;
   z-index: 1;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
 }
-
-.awrapper .box {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  padding: 24px 20px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 16px;
-  transition: all 0.3s ease;
-}
-.awrapper .box:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.3);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-}
-
-.awrapper img {
-  width: 44px;
-  height: 44px;
-  object-fit: contain;
-  flex-shrink: 0;
-  filter: brightness(0) invert(1) opacity(0.9);
-}
-
-.awrapper h1 {
-  font-family: 'Poppins', sans-serif;
-  font-size: clamp(28px, 3.5vw, 44px);
-  font-weight: 800;
-  color: #ffffff;
-  line-height: 1;
-}
-.awrapper h3 {
+.benefits2-card p {
+  position: relative;
+  z-index: 1;
+  color: var(--text-muted);
   font-size: 14px;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.75);
-  margin-top: 4px;
+  line-height: 1.7;
+}
+
+/* ---- Stats Banner (floating card, overlaps hero) ---- */
+.statsBanner {
+  position: relative;
+  z-index: 5;
+  background: var(--bg);
+}
+.statsBanner-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.18);
+  margin-top: -56px;
+  padding: 32px 20px;
+}
+.statsBanner-item {
+  text-align: center;
+  padding: 0 16px;
+  border-right: 1px solid var(--border);
+}
+.statsBanner-item:last-child { border-right: none; }
+.statsBanner-item i {
+  font-size: 30px;
+  color: var(--accent);
+  margin-bottom: 10px;
+  display: block;
+}
+.statsBanner-item h3 {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: clamp(22px, 2.6vw, 30px);
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+.statsBanner-item p {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0;
 }
 
 /* ---- Responsive ---- */
-@media screen and (max-width: 1024px) {
-  .aboutHome .right { padding: 40px 30px; }
-}
-
 @media screen and (max-width: 768px) {
-  .aboutHome {
-    padding: 60px 0;
-  }
-  .aboutHome .container {
-    flex-direction: column-reverse;
-    gap: 0;
-  }
-  .aboutHome .row { width: 100%; }
-  .aboutHome .left img {
-    border-radius: 14px;
-    height: 260px;
-    object-position: top;
-  }
-  .awrapper .box { flex-direction: column; text-align: center; gap: 10px; }
-  .awrapper img { margin: 0 auto; }
+  .benefits2 { padding: 70px 0; }
+  .benefits2-grid { grid-template-columns: 1fr; }
+  .statsBanner-grid { grid-template-columns: repeat(2, 1fr); gap: 20px 0; margin-top: -40px; }
+  .statsBanner-item { border-right: none; padding: 0 8px; }
+  .statsBanner-item:nth-child(odd) { border-right: 1px solid var(--border); }
 }
 
 @media screen and (max-width: 576px) {
-  .aboutHome { padding: 42px 0; }
-  .aboutHome .right { padding: 28px 0 0; }
-  .aboutHome .items { gap: 12px; margin-top: 24px; }
-  .aboutHome .item { padding: 16px; gap: 14px; }
-  .aboutHome .img { width: 50px; height: 50px; }
-  .aboutHome .img img { width: 28px; height: 28px; }
-  .aboutHome .item h2 { font-size: 15px; }
-  .awrapper { padding: 40px 0; }
-  .awrapper .box { padding: 18px 14px; gap: 8px; }
-  .awrapper h1 { font-size: clamp(24px, 7vw, 36px); }
-  .awrapper h3 { font-size: 13px; }
+  .benefits2 { padding: 50px 0; }
+  .benefits2-intro { margin-bottom: 36px; }
+  .benefits2-card { padding: 24px; }
+  .statsBanner-grid { padding: 22px 14px; border-radius: var(--radius); }
+  .statsBanner-item i { font-size: 24px; }
 }

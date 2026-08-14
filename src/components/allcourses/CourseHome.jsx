@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
+import Back from "../common/back/Back"
 import CoursesCard from "./CoursesCard"
-import OnlineCourses from "./OnlineCourses"
+import LearningPath from "../common/learningPath/LearningPath"
 import { useLocation } from "react-router-dom"
 
 const CourseHome = () => {
@@ -18,8 +19,12 @@ const CourseHome = () => {
 
   return (
     <>
+      <Back
+        title='Explore Courses'
+        desc='Join thousands of successful graduates who launched their tech careers through our structured, project-based programs.'
+      />
+      <LearningPath />
       <CoursesCard />
-      <OnlineCourses />
     </>
   )
 }

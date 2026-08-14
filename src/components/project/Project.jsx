@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import Back from "../common/back/Back"
 import "./project.css"
 
 const projectData = [
@@ -146,6 +147,7 @@ const Project = () => {
 
   return (
     <>
+      <Back title={<>We Help You Build Projects That Get's You <span className='back-highlight'>Hired</span></>} />
       <section className='project'>
         <div className='container project__content'>
           <div className='project__hero'>
